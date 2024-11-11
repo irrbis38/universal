@@ -141,24 +141,24 @@ var initHeader = (header) => {
     var mobileMenuTransition = (mobileButtons) => {
         if (mobileWrappers.length < 1) return;
 
-        var delay = mobileMenu.dataset.animationDelay || 200;
+        var delay = mobileMenu.dataset.animationDelay || 400;
 
         mobileButtons.forEach((btn) => {
             btn.addEventListener("click", () => {
-                var parentWrapper = btn.closest(".header_art6__mobile_wrapper");
+                var currentWrapper = btn.closest(
+                    ".header_art6__mobile_wrapper"
+                );
 
                 var targetWrapper = mobileWrappers.find(
                     (w) => w.dataset.id === btn.dataset.id
                 );
 
                 if (targetWrapper) {
-                    parentWrapper.style.pointerEvents = "none";
-                    targetWrapper.style.pointerEvents = "none";
-                    parentWrapper.classList.remove("active");
+                    currentWrapper.style.display = "none";
+                    currentWrapper.classList.remove("active");
+                    targetWrapper.classList.add("active");
                     setTimeout(() => {
-                        targetWrapper.classList.add("active");
-                        parentWrapper.style.pointerEvents = "";
-                        targetWrapper.style.pointerEvents = "";
+                        currentWrapper.style.display = "";
                     }, delay);
                 }
             });
