@@ -235,15 +235,17 @@ textarea {
 
 /* Блок HEADER */
 .header_art6 {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 10;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
-@media (max-width: 767px) {
-  .header_art6 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
+.header_art6.hide {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .header_art6__overlay {
   position: fixed;
@@ -611,6 +613,14 @@ textarea {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+.header_art6__dropdown::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px;
 }
 .header_art6__dropdown_item {
   position: relative;
