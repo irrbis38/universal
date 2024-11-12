@@ -172,35 +172,35 @@ var initHeader = (header) => {
 
     // скрыть / показать блюр при скролле
 
-    const callback = (entries, observer) => {
-        entries.forEach((entry) => {
-            var parentInner = entry.target.closest(
-                ".header_art6__mobile_wrapper"
-            );
+    // const callback = (entries, observer) => {
+    //     entries.forEach((entry) => {
+    //         var parentInner = entry.target.closest(
+    //             ".header_art6__mobile_wrapper"
+    //         );
 
-            if (entry.isIntersecting) {
-                parentInner.classList.add("hide_blur");
-            } else {
-                parentInner.classList.remove("hide_blur");
-            }
-        });
-    };
+    //         if (entry.isIntersecting) {
+    //             parentInner.classList.add("hide_blur");
+    //         } else {
+    //             parentInner.classList.remove("hide_blur");
+    //         }
+    //     });
+    // };
 
-    var inners = header.querySelectorAll(".header_art6__mobile_inner");
+    // var inners = header.querySelectorAll(".header_art6__mobile_inner");
 
-    inners.forEach((inner) => {
-        const options = {
-            threshold: 0,
-        };
+    // inners.forEach((inner) => {
+    //     const options = {
+    //         threshold: 0,
+    //     };
 
-        const list = inner.querySelector(".header_art6__mobile_list");
+    //     const list = inner.querySelector(".header_art6__mobile_list");
 
-        const lastElement = list.lastElementChild;
+    //     const lastElement = list.lastElementChild;
 
-        const observer = new IntersectionObserver(callback, options);
+    //     const observer = new IntersectionObserver(callback, options);
 
-        observer.observe(lastElement);
-    });
+    //     observer.observe(lastElement);
+    // });
 
     // hide / show header by scroll
 
