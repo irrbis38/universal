@@ -92,7 +92,6 @@ var initHeader = (header) => {
   // обработчик выпадающего меню
 
   var closeDropdown = (e) => {
-    console.log("here");
     if (!e.target.closest(".item_has_dropdown")) {
       hasDropdown.forEach((i) => {
         i.classList.remove("active");
