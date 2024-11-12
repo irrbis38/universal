@@ -1,11 +1,22 @@
 .header_art6 {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
     transition: transform $transition03;
 
     &.hide {
         transform: translateY(-100%);
+    }
+}
+
+.header_art6__fake {
+    height: 100px;
+    width: 100%;
+
+    @include xs {
+        height: 65px;
     }
 }
 
