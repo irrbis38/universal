@@ -235,9 +235,10 @@ textarea {
 
 /* Блок HEADER */
 .header_art6 {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
@@ -246,6 +247,15 @@ textarea {
 .header_art6.hide {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
+}
+.header_art6__fake {
+  height: 100px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .header_art6__fake {
+    height: 65px;
+  }
 }
 .header_art6__overlay {
   position: fixed;
