@@ -105,7 +105,6 @@ var initHeader = (header) => {
     // обработчик выпадающего меню
 
     var closeDropdown = (e) => {
-        console.log("here");
         if (!e.target.closest(".item_has_dropdown")) {
             hasDropdown.forEach((i) => {
                 i.classList.remove("active");
@@ -254,8 +253,55 @@ var initHeader = (header) => {
     toggleHeaderByScroll(header);
 };
 
+var initSlider = (sliderContainer) => {
+    var slider = new Swiper(sliderContainer, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+            delay: 15000,
+        },
+        pagination: {
+            el: ".slider-v-1__navigation",
+            clickable: true,
+        },
+    });
+
+    // window.onload = function () {
+    //     // not mentioning the state at all does not provide the expected result, so you need to set
+    //     // the state to paused and set it to running on window load
+
+    //     document.querySelector(
+    //         ".swiper-pagination-bullet.swiper-pagination-bullet-active"
+    //     ).style.animationPlayState = "running";
+    // };
+
+    window.addEventListener("blur", () => {
+        var el = document.querySelector(
+            ".swiper-pagination-bullet.swiper-pagination-bullet-active"
+        );
+
+        el.classList.add("paused");
+
+        console.log("paused");
+    });
+
+    // window.onfocus = function () {
+    //     document.querySelector(
+    //         ".swiper-pagination-bullet.swiper-pagination-bullet-active"
+    //     ).style.animationPlayState = "running";
+    // };
+};
+
 document.addEventListener("DOMContentLoaded", () => {
+    // init header
     var header = document.querySelector(".header_art6");
 
     header && initHeader(header);
+
+    // init slider
+
+    var sliderContainer = document.querySelector(".slider-v-1__container");
+
+    sliderContainer && initSlider(sliderContainer);
 });

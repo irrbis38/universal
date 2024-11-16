@@ -1,0 +1,126 @@
+/* slider-v-1 styles */
+
+.slider-v-1__container {
+    position: relative;
+}
+
+.slider-v-1__slide {
+    picture,
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slider-v-1__navigation.swiper-pagination-horizontal {
+    position: absolute;
+    bottom: 58px;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    gap: 0 16px;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+
+    .swiper-pagination-bullet {
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        margin: 0;
+        background-color: var(--color-white, #fff);
+        border-radius: 50%;
+        border: 2px solid var(--color-sernye-linii, #c9c9c9);
+        opacity: 1;
+        transition: all $transition;
+
+        @include xs {
+            width: 13px;
+            height: 13px;
+        }
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(90deg);
+        background-color: var(--color-siniy, #355ddb);
+
+        &.paused {
+            animation-play-state: paused;
+        }
+
+        &::before {
+            content: "";
+            box-sizing: border-box;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 9px solid var(--color-white, #fff);
+            animation: rotateGradient 15s linear;
+        }
+
+        @include xs {
+            width: 16px;
+            height: 16px;
+
+            &::before {
+                border: 7px solid var(--color-white, #fff);
+            }
+        }
+
+        @keyframes rotateGradient {
+            0% {
+                clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            }
+            25% {
+                clip-path: polygon(
+                    50% 50%,
+                    0 0,
+                    100% 0,
+                    100% 0,
+                    100% 0,
+                    100% 0
+                );
+            }
+            50% {
+                clip-path: polygon(
+                    50% 50%,
+                    0 0,
+                    100% 0,
+                    100% 100%,
+                    100% 100%,
+                    100% 100%
+                );
+            }
+            75% {
+                clip-path: polygon(
+                    50% 50%,
+                    0 0,
+                    100% 0,
+                    100% 100%,
+                    0 100%,
+                    0 100%
+                );
+            }
+            100% {
+                clip-path: polygon(
+                    50% 50%,
+                    0 0,
+                    100% 0,
+                    100% 100%,
+                    0 100%,
+                    0 0
+                );
+            }
+        }
+    }
+}
+
+/* end of slider-v-1 styles */
