@@ -202,8 +202,30 @@ var initHeader = (header) => {
   toggleHeaderByScroll(header);
 };
 
+var initSlider = (sliderContainer) => {
+  var slider = new Swiper(sliderContainer, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 15000,
+    },
+    pagination: {
+      el: ".slider-v-1__navigation",
+      clickable: true,
+    },
+  });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
+  // init header
   var header = document.querySelector(".header_art6");
 
   header && initHeader(header);
+
+  // init slider
+
+  var sliderContainer = document.querySelector(".slider-v-1__container");
+
+  sliderContainer && initSlider(sliderContainer);
 });
