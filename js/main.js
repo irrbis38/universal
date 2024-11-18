@@ -208,7 +208,7 @@ var initSlider = (sliderContainer) => {
     spaceBetween: 0,
     loop: true,
     autoplay: {
-      delay: 15000,
+      delay: 8000,
     },
     pagination: {
       el: ".slider-v-1__navigation",
