@@ -25,6 +25,7 @@
     transform: translateX(-50%);
 
     .swiper-pagination-bullet {
+        position: relative;
         display: inline-block;
         width: 17px;
         height: 17px;
@@ -34,6 +35,17 @@
         border: 2px solid var(--color-sernye-linii, #c9c9c9);
         opacity: 1;
         transition: all $transition;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+        }
 
         @include xs {
             width: 13px;
@@ -63,7 +75,7 @@
             height: 100%;
             border-radius: 50%;
             border: 9px solid var(--color-white, #fff);
-            animation: rotateGradient 15s linear;
+            animation: rotateGradient $animationDuration linear;
         }
 
         @include xs {

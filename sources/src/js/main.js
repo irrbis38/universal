@@ -259,38 +259,13 @@ var initSlider = (sliderContainer) => {
         spaceBetween: 0,
         loop: true,
         autoplay: {
-            delay: 15000,
+            delay: 8000,
         },
         pagination: {
             el: ".slider-v-1__navigation",
             clickable: true,
         },
     });
-
-    // window.onload = function () {
-    //     // not mentioning the state at all does not provide the expected result, so you need to set
-    //     // the state to paused and set it to running on window load
-
-    //     document.querySelector(
-    //         ".swiper-pagination-bullet.swiper-pagination-bullet-active"
-    //     ).style.animationPlayState = "running";
-    // };
-
-    window.addEventListener("blur", () => {
-        var el = document.querySelector(
-            ".swiper-pagination-bullet.swiper-pagination-bullet-active"
-        );
-
-        el.classList.add("paused");
-
-        console.log("paused");
-    });
-
-    // window.onfocus = function () {
-    //     document.querySelector(
-    //         ".swiper-pagination-bullet.swiper-pagination-bullet-active"
-    //     ).style.animationPlayState = "running";
-    // };
 };
 
 document.addEventListener("DOMContentLoaded", () => {
