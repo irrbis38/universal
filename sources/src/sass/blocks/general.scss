@@ -218,9 +218,9 @@
         font-size: 14;
     }
 }
-p,
-ul,
-ol {
+.p,
+.ul,
+.ol {
     margin-bottom: 16px;
     font-size: 16px;
 
@@ -235,12 +235,12 @@ ol {
     }
 }
 
-p {
+.p {
     line-height: 160%;
 }
 
-ul,
-ol {
+.ul,
+.ol {
     line-height: 160%;
 
     &:not(:last-child) {
