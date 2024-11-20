@@ -43,13 +43,45 @@
             left: 50%;
             transform: translate(-50%, -50%);
             display: inline-block;
-            width: 22px;
-            height: 22px;
+            width: 21px;
+            height: 21px;
+        }
+
+        @include lg {
+            width: 15px;
+            height: 15px;
+
+            &::after {
+                width: 19px;
+                height: 19px;
+            }
+        }
+
+        @include lg {
+            width: 14px;
+            height: 14px;
+        }
+
+        @include sm {
+            gap: 0 12px;
+            width: 10px;
+            height: 10px;
+
+            &::after {
+                width: 14px;
+                height: 14px;
+            }
         }
 
         @include xs {
-            width: 13px;
-            height: 13px;
+            gap: 0 16px;
+            width: 17px;
+            height: 17px;
+
+            &::after {
+                width: 21px;
+                height: 21px;
+            }
         }
     }
 
@@ -78,12 +110,39 @@
             animation: rotateGradient $animationDuration linear;
         }
 
-        @include xs {
-            width: 16px;
-            height: 16px;
+        @include xl {
+            width: 18px;
+            height: 18px;
+
+            &::before {
+                border: 8px solid var(--color-white, #fff);
+            }
+        }
+
+        @include lg {
+            width: 17px;
+            height: 17px;
 
             &::before {
                 border: 7px solid var(--color-white, #fff);
+            }
+        }
+
+        @include sm {
+            width: 13px;
+            height: 13px;
+
+            &::before {
+                border: 5px solid var(--color-white, #fff);
+            }
+        }
+
+        @include xs {
+            width: 20px;
+            height: 20px;
+
+            &::before {
+                border: 9px solid var(--color-white, #fff);
             }
         }
 
