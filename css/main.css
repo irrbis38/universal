@@ -172,42 +172,42 @@ template {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/montserrat-v29-latin-regular.woff2) format("woff2"),url(../fonts/montserrat-v29-latin-regular.ttf) format("truetype")
+  src: url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-regular.woff2) format("woff2"),url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-regular.ttf) format("truetype")
 }
 @font-face {
   font-display: swap;
   font-family: Montserrat;
   font-style: italic;
   font-weight: 400;
-  src: url(../fonts/montserrat-v29-latin-italic.woff2) format("woff2"),url(../fonts/montserrat-v29-latin-italic.ttf) format("truetype")
+  src: url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-italic.woff2) format("woff2"),url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-italic.ttf) format("truetype")
 }
 @font-face {
   font-display: swap;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
-  src: url(../fonts/montserrat-v29-latin-500.woff2) format("woff2"),url(../fonts/montserrat-v29-latin-500.ttf) format("truetype")
+  src: url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-500.woff2) format("woff2"),url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-500.ttf) format("truetype")
 }
 @font-face {
   font-display: swap;
   font-family: Montserrat;
   font-style: italic;
   font-weight: 500;
-  src: url(../fonts/montserrat-v29-latin-500italic.woff2) format("woff2"),url(../fonts/montserrat-v29-latin-500italic.ttf) format("truetype")
+  src: url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-500italic.woff2) format("woff2"),url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-500italic.ttf) format("truetype")
 }
 @font-face {
   font-display: swap;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
-  src: url(../fonts/montserrat-v29-latin-600.woff2) format("woff2"),url(../fonts/montserrat-v29-latin-600.ttf) format("truetype")
+  src: url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-600.woff2) format("woff2"),url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-600.ttf) format("truetype")
 }
 @font-face {
   font-display: swap;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/montserrat-v29-latin-700.woff2) format("woff2"),url(../fonts/montserrat-v29-latin-700.ttf) format("truetype")
+  src: url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-700.woff2) format("woff2"),url(../fonts/montserrat-v29-cyrillic-ext_latin-ext-700.ttf) format("truetype")
 }
 @font-face {
   font-family: swiper-icons;
@@ -906,6 +906,7 @@ textarea {
 .h1 {
   margin-bottom: 30px;
   font-size: 66px;
+  font-weight: 500;
   line-height: 110%
 }
 @media (max-width:1600px) {
@@ -935,6 +936,7 @@ textarea {
 }
 .h1_xs {
   margin-bottom: 30px;
+  font-weight: 500;
   font-size: 58px;
   line-height: 110%
 }
@@ -966,6 +968,7 @@ textarea {
 .h2 {
   margin-bottom: 26px;
   font-size: 52px;
+  font-weight: 500;
   line-height: 110%
 }
 @media (max-width:1600px) {
@@ -994,6 +997,7 @@ textarea {
 }
 .h2_xs {
   margin-bottom: 24px;
+  font-weight: 500;
   font-size: 44px;
   line-height: 130%
 }
@@ -1023,6 +1027,7 @@ textarea {
 .h3 {
   margin-bottom: 22px;
   font-size: 40px;
+  font-weight: 500;
   line-height: 130%
 }
 @media (max-width:1600px) {
@@ -1045,6 +1050,7 @@ textarea {
 .h3_xs {
   margin-bottom: 22px;
   font-size: 32px;
+  font-weight: 500;
   line-height: 130%
 }
 @media (max-width:1600px) {
@@ -1073,6 +1079,7 @@ textarea {
 .h4 {
   margin-bottom: 20px;
   font-size: 30px;
+  font-weight: 500;
   line-height: 130%
 }
 @media (max-width:1600px) {
@@ -1100,6 +1107,7 @@ textarea {
 .h4_xs {
   margin-bottom: 18px;
   font-size: 24px;
+  font-weight: 500;
   line-height: 140%
 }
 @media (max-width:1600px) {
@@ -1122,6 +1130,7 @@ textarea {
 .h5 {
   margin-bottom: 18px;
   font-size: 22px;
+  font-weight: 500;
   line-height: 140%
 }
 @media (max-width:1600px) {
@@ -1144,6 +1153,7 @@ textarea {
 .h6 {
   margin-bottom: 18px;
   font-size: 16px;
+  font-weight: 700;
   line-height: 160%
 }
 @media (max-width:1300px) {
@@ -1430,11 +1440,34 @@ a {
   border: 1px solid var(--color-siniy-active,#304790);
   background-color: var(--color-belyy,#fcfcfc)
 }
+.btn_large {
+  min-width: 310px;
+  min-height: 54px;
+  padding: 15px 70px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px
+}
+@media (max-width:1600px) {
+  .btn_large {
+    font-size: 14px
+  }
+}
+@media (max-width:1300px) {
+  .btn_large {
+    font-size: 13px
+  }
+}
+@media (max-width:767px) {
+  .btn_large {
+    font-size: 14px
+  }
+}
 .btn_green {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  gap: 0 7px;
+  gap: 0 14px;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1442,7 +1475,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   min-height: 48px;
-  padding: 12px 24px;
+  padding: 8px 27px;
   font-weight: 500;
   font-size: 14px;
   line-height: 171%;
@@ -1483,7 +1516,6 @@ a {
     transform: rotate(-45deg)
   }
   .btn_green:hover path {
-    fill: var(--color-belyy,#fcfcfc);
     stroke: var(--color-belyy,#fcfcfc)
   }
 }
@@ -1497,7 +1529,6 @@ a {
   transform: rotate(-45deg)
 }
 .btn_green:active path {
-  fill: var(--color-belyy,#fcfcfc);
   stroke: var(--color-belyy,#fcfcfc)
 }
 .arrow_link,
@@ -1552,7 +1583,6 @@ a {
     transform: rotate(-45deg)
   }
   .arrow_link:hover path {
-    fill: var(--color-siniy,#355ddb);
     stroke: var(--color-siniy,#355ddb)
   }
 }
@@ -1561,7 +1591,6 @@ a {
   transform: rotate(-45deg)
 }
 .arrow_link:active path {
-  fill: var(--color-siniy-active,#304790);
   stroke: var(--color-siniy-active,#304790)
 }
 .header_art6 {
@@ -1835,12 +1864,15 @@ a {
   background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_149_966)'%3E%3Cpath d='M0.75 1.125L4.5 4.875L8.25 1.125' stroke='%23355ddb' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_149_966'%3E%3Crect width='9' height='6' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   opacity: 0
 }
-.header_art6__menu_item.item_has_dropdown > a.active::after,
-.header_art6__menu_item.item_has_dropdown > a.active::before {
-  -webkit-transform: translateY(-50%) scale(-1);
-  transform: translateY(-50%) scale(-1)
+.header_art6__menu_item.item_has_dropdown.active > a::after,
+.header_art6__menu_item.item_has_dropdown.active > a::before {
+  -webkit-transform: translateY(-50%) scaleY(-1);
+  transform: translateY(-50%) scaleY(-1)
 }
-.header_art6__menu_item.item_has_dropdown > a:active::after {
+.header_art6__menu_item.item_has_dropdown.active > a::before {
+  opacity: 0
+}
+.header_art6__menu_item.item_has_dropdown.active > a::before {
   background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_362_122)'%3E%3Cpath d='M0.75 1.125L4.5 4.875L8.25 1.125' stroke='%23304790' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_362_122'%3E%3Crect width='9' height='6' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   opacity: 1
 }
