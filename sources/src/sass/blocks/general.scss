@@ -1,6 +1,7 @@
 .h1 {
     margin-bottom: 30px;
     font-size: 66px;
+    font-weight: 500;
     line-height: 110%;
 
     @include xl {
@@ -27,6 +28,7 @@
 
 .h1_xs {
     margin-bottom: 30px;
+    font-weight: 500;
     font-size: 58px;
     line-height: 110%;
 
@@ -54,6 +56,7 @@
 .h2 {
     margin-bottom: 26px;
     font-size: 52px;
+    font-weight: 500;
     line-height: 110%;
 
     @include xl {
@@ -78,6 +81,7 @@
 }
 .h2_xs {
     margin-bottom: 24px;
+    font-weight: 500;
     font-size: 44px;
     line-height: 130%;
 
@@ -103,6 +107,7 @@
 .h3 {
     margin-bottom: 22px;
     font-size: 40px;
+    font-weight: 500;
     line-height: 130%;
 
     @include xl {
@@ -122,6 +127,7 @@
 .h3_xs {
     margin-bottom: 22px;
     font-size: 32px;
+    font-weight: 500;
     line-height: 130%;
 
     @include xl {
@@ -146,6 +152,7 @@
 .h4 {
     margin-bottom: 20px;
     font-size: 30px;
+    font-weight: 500;
     line-height: 130%;
 
     @include xl {
@@ -169,6 +176,7 @@
 .h4_xs {
     margin-bottom: 18px;
     font-size: 24px;
+    font-weight: 500;
     line-height: 140%;
 
     @include xl {
@@ -188,6 +196,7 @@
 .h5 {
     margin-bottom: 18px;
     font-size: 22px;
+    font-weight: 500;
     line-height: 140%;
 
     @include xl {
@@ -207,6 +216,7 @@
 .h6 {
     margin-bottom: 18px;
     font-size: 16px;
+    font-weight: 700;
     line-height: 160%;
 
     @include lg {
@@ -433,13 +443,33 @@ a {
         background-color: var(--color-belyy, #fcfcfc);
     }
 }
+.btn_large {
+    min-width: 310px;
+    min-height: 54px;
+    padding: 15px 70px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+
+    @include xl {
+        font-size: 14px;
+    }
+
+    @include lg {
+        font-size: 13px;
+    }
+
+    @include xs {
+        font-size: 14px;
+    }
+}
 .btn_green {
     display: inline-flex;
-    gap: 0 7px;
+    gap: 0 14px;
     justify-content: center;
     align-items: center;
     min-height: 48px;
-    padding: 12px 24px;
+    padding: 8px 27px;
     font-weight: 500;
     font-size: 14px;
     line-height: 171%;
@@ -476,7 +506,7 @@ a {
             }
 
             path {
-                fill: var(--color-belyy, #fcfcfc);
+                // fill: var(--color-belyy, #fcfcfc);
                 stroke: var(--color-belyy, #fcfcfc);
             }
         }
@@ -492,7 +522,7 @@ a {
         }
 
         path {
-            fill: var(--color-belyy, #fcfcfc);
+            // fill: var(--color-belyy, #fcfcfc);
             stroke: var(--color-belyy, #fcfcfc);
         }
     }
@@ -547,7 +577,7 @@ a {
             }
 
             path {
-                fill: var(--color-siniy, #355ddb);
+                // fill: var(--color-siniy, #355ddb);
                 stroke: var(--color-siniy, #355ddb);
             }
         }
@@ -559,7 +589,7 @@ a {
         }
 
         path {
-            fill: var(--color-siniy-active, #304790);
+            // fill: var(--color-siniy-active, #304790);
             stroke: var(--color-siniy-active, #304790);
         }
     }
