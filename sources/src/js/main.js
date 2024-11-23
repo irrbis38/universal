@@ -1,18 +1,18 @@
 var initHeader = (header) => {
-    var menuBtn = header.querySelector(".header_art6__menu_btn"),
-        mobileBtn = header.querySelector(".header_art6__show_mobile"),
+    var menuBtn = header.querySelector(".header_v_1_art6__menu_btn"),
+        mobileBtn = header.querySelector(".header_v_1_art6__show_mobile"),
         hasDropdown = header.querySelectorAll(".item_has_dropdown"),
-        menuExtra = header.querySelector(".header_art6__extra"),
-        overlay = header.querySelector(".header_art6__overlay"),
-        mobileMenu = header.querySelector(".header_art6__mobile"),
-        extraItems = header.querySelectorAll(".header_art6__extra_item"),
-        moreButtons = header.querySelectorAll(".header_art6__more_btn"),
+        menuExtra = header.querySelector(".header_v_1_art6__extra"),
+        overlay = header.querySelector(".header_v_1_art6__overlay"),
+        mobileMenu = header.querySelector(".header_v_1_art6__mobile"),
+        extraItems = header.querySelectorAll(".header_v_1_art6__extra_item"),
+        moreButtons = header.querySelectorAll(".header_v_1_art6__more_btn"),
         mobileButtons = header.querySelectorAll(".js_toggle_mobile_menu_btn"),
         mobileWrappers = Array.from(
-            header.querySelectorAll(".header_art6__mobile_wrapper")
+            header.querySelectorAll(".header_v_1_art6__mobile_wrapper")
         ),
         mobileCallBackButton = header.querySelector(
-            ".header_art6__mobile_phone"
+            ".header_v_1_art6__mobile_phone"
         );
 
     // обработчик дополнительного меню
@@ -97,7 +97,7 @@ var initHeader = (header) => {
     moreButtons.length > 0 &&
         moreButtons.forEach((btn) => {
             btn.addEventListener("click", () => {
-                var parent = btn.closest(".header_art6__extra_item");
+                var parent = btn.closest(".header_v_1_art6__extra_item");
                 parent.classList.toggle("active");
             });
         });
@@ -148,7 +148,7 @@ var initHeader = (header) => {
         mobileButtons.forEach((btn) => {
             btn.addEventListener("click", () => {
                 var currentWrapper = btn.closest(
-                    ".header_art6__mobile_wrapper"
+                    ".header_v_1_art6__mobile_wrapper"
                 );
 
                 var targetWrapper = mobileWrappers.find(
@@ -174,7 +174,7 @@ var initHeader = (header) => {
     // const callback = (entries, observer) => {
     //     entries.forEach((entry) => {
     //         var parentInner = entry.target.closest(
-    //             ".header_art6__mobile_wrapper"
+    //             ".header_v_1_art6__mobile_wrapper"
     //         );
 
     //         if (entry.isIntersecting) {
@@ -185,14 +185,14 @@ var initHeader = (header) => {
     //     });
     // };
 
-    // var inners = header.querySelectorAll(".header_art6__mobile_inner");
+    // var inners = header.querySelectorAll(".header_v_1_art6__mobile_inner");
 
     // inners.forEach((inner) => {
     //     const options = {
     //         threshold: 0,
     //     };
 
-    //     const list = inner.querySelector(".header_art6__mobile_list");
+    //     const list = inner.querySelector(".header_v_1_art6__mobile_list");
 
     //     const lastElement = list.lastElementChild;
 
@@ -270,7 +270,7 @@ var initSlider = (sliderContainer) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     // init header
-    var header = document.querySelector(".header_art6");
+    var header = document.querySelector(".header_v_1_art6");
 
     header && initHeader(header);
 
