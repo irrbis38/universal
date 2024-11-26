@@ -1021,7 +1021,10 @@ ul {
   list-style-type: disc
 }
 li {
-  line-height: 190%
+  line-height: 160%
+}
+li:not(:last-child) {
+  margin-bottom: 4px
 }
 .mb_30 {
   margin-bottom: 30px
