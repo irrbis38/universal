@@ -42,52 +42,79 @@
 }
 
 .h1_xs {
-    margin-bottom: 30px;
     font-weight: 500;
     font-size: 58px;
     line-height: 110%;
 
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
     @include xl {
-        margin-bottom: 26px;
         font-size: 46px;
         line-height: 130%;
+
+        &:not(:last-child) {
+            margin-bottom: 26px;
+        }
     }
 
     @include lg {
-        margin-bottom: 24px;
         font-size: 36px;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
     }
 
     @include sm {
-        margin-bottom: 22px;
         font-size: 28px;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
     }
 
     @include xs {
-        margin-bottom: 20px;
         font-size: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 }
 .h2 {
-    margin-bottom: 26px;
     font-size: 52px;
     font-weight: 500;
     line-height: 110%;
 
+    &:not(:last-child) {
+        margin-bottom: 26px;
+    }
+
     @include xl {
-        margin-bottom: 24px;
         font-size: 42px;
         line-height: 130%;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
     }
 
     @include lg {
-        margin-bottom: 22px;
         font-size: 34px;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
     }
 
     @include sm {
-        margin-bottom: 20px;
         font-size: 28px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     @include xs {
@@ -95,19 +122,28 @@
     }
 }
 .h2_xs {
-    margin-bottom: 24px;
     font-weight: 500;
     font-size: 44px;
     line-height: 130%;
 
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
     @include xl {
-        margin-bottom: 22px;
         font-size: 34px;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
     }
 
     @include lg {
-        margin-bottom: 20px;
         font-size: 26px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     @include sm {
@@ -120,18 +156,24 @@
     }
 }
 .h3 {
-    margin-bottom: 22px;
     font-size: 40px;
     font-weight: 500;
     line-height: 130%;
+
+    &:not(:last-child) {
+        margin-bottom: 22px;
+    }
 
     @include xl {
         font-size: 32px;
     }
 
     @include lg {
-        margin-bottom: 20px;
         font-size: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     @include sm {
@@ -140,20 +182,29 @@
     }
 }
 .h3_xs {
-    margin-bottom: 22px;
     font-size: 32px;
     font-weight: 500;
     line-height: 130%;
 
+    &:not(:last-child) {
+        margin-bottom: 22px;
+    }
+
     @include xl {
-        margin-bottom: 20px;
         font-size: 26px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     @include lg {
-        margin-bottom: 18px;
         font-size: 22px;
         line-height: 140%;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
     }
 
     @include sm {
@@ -165,10 +216,13 @@
     }
 }
 .h4 {
-    margin-bottom: 20px;
     font-size: 30px;
     font-weight: 500;
     line-height: 130%;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
 
     @include xl {
         font-size: 24px;
@@ -176,8 +230,11 @@
     }
 
     @include lg {
-        margin-bottom: 18px;
         font-size: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
     }
 
     @include sm {
@@ -189,18 +246,24 @@
     }
 }
 .h4_xs {
-    margin-bottom: 18px;
     font-size: 24px;
     font-weight: 500;
     line-height: 140%;
+
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
 
     @include xl {
         font-size: 20px;
     }
 
     @include lg {
-        margin-bottom: 16px;
         font-size: 18px;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
     }
 
     @include sm {
@@ -209,18 +272,24 @@
     }
 }
 .h5 {
-    margin-bottom: 18px;
     font-size: 22px;
     font-weight: 500;
     line-height: 140%;
+
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
 
     @include xl {
         font-size: 20px;
     }
 
     @include lg {
-        margin-bottom: 16px;
         font-size: 18px;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
     }
 
     @include sm {
@@ -229,14 +298,20 @@
     }
 }
 .h6 {
-    margin-bottom: 18px;
     font-size: 16px;
     font-weight: 700;
     line-height: 160%;
 
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
     @include lg {
-        margin-bottom: 16px;
         font-size: 15px;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
     }
 
     @include xs {
@@ -246,17 +321,26 @@
 p,
 ul,
 ol {
-    margin-bottom: 16px;
     font-size: 16px;
 
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
     @include lg {
-        margin-bottom: 15px;
         font-size: 15px;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
     }
 
     @include xs {
-        margin-bottom: 14px;
         font-size: 14px;
+
+        &:not(:last-child) {
+            margin-bottom: 14px;
+        }
     }
 }
 
@@ -458,11 +542,11 @@ a {
         }
     }
 
-    &:active {
-        color: var(--color-siniy-active, #304790);
-        border: 1.5px solid var(--color-siniy-active, #304790);
-        background-color: var(--color-belyy, #fcfcfc);
-    }
+    // &:active {
+    //     color: var(--color-siniy-active, #304790);
+    //     border: 1.5px solid var(--color-siniy-active, #304790);
+    //     background-color: var(--color-belyy, #fcfcfc);
+    // }
 }
 .btn_large {
     min-width: 310px;
@@ -545,11 +629,11 @@ a {
         }
     }
 
-    &:active {
-        color: var(--color-belyy, #fcfcfc);
-        border: 1.5px solid var(--color-green-active, #085e2c);
-        background-color: var(--color-green-active, #085e2c);
-    }
+    // &:active {
+    //     color: var(--color-belyy, #fcfcfc);
+    //     border: 1.5px solid var(--color-green-active, #085e2c);
+    //     background-color: var(--color-green-active, #085e2c);
+    // }
 }
 
 .phone_link,
@@ -564,9 +648,9 @@ a {
         }
     }
 
-    &:active {
-        color: var(--color-siniy-active, #304790);
-    }
+    // &:active {
+    //     color: var(--color-siniy-active, #304790);
+    // }
 }
 
 .phone_link {
@@ -622,14 +706,14 @@ a {
         }
     }
 
-    &:active {
-        .btn_arrow__default,
-        .btn_arrow__hover {
-            opacity: 0;
-        }
+    // &:active {
+    //     .btn_arrow__default,
+    //     .btn_arrow__hover {
+    //         opacity: 0;
+    //     }
 
-        .btn_arrow__active {
-            opacity: 1;
-        }
-    }
+    //     .btn_arrow__active {
+    //         opacity: 1;
+    //     }
+    // }
 }
