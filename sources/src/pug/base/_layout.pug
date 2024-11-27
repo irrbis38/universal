@@ -2,10 +2,11 @@ include _vars
 include _mixins
 doctype html
 html(lang="ru")
+    block vars
     head
         block head
             title PageTitle
-        
+
         meta(charset="utf-8")
         meta(name="keywords" content="")
 
@@ -26,12 +27,16 @@ html(lang="ru")
         meta(name="msapplication-TileImage" content="images/favicons/mstile-144x144.png")
         meta(name="msapplication-config" content="images/favicons/browserconfig.xml")
         meta(name="theme-color" content="#ffffff")
-        
+
         link(rel="stylesheet" href="css/main.min.css")
 
     body
         block header
-            include ../blocks/_header
+            if pageName == 'perv-ekr'
+                include ../blocks/_header_perv_ekr
+
+            else
+                include ../blocks/_header
 
         block main
             include ../blocks/_main

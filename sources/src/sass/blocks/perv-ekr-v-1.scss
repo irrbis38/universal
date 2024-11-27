@@ -1,0 +1,31 @@
+.perv_ekr_v_1 {
+    padding: 74px 0;
+    background-color: #093f5a;
+
+    @include xl {
+        padding: 62px 0;
+    }
+
+    @include lg {
+        padding: 50px 0;
+    }
+
+    @include sm {
+        padding: 45px 0;
+    }
+}
+
+.perv_ekr_v_1__title {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $color_white;
+}
+
+.perv_ekr_v_1__color_text {
+    display: block;
+    color: #ff8a3d;
+}
+
+.perv_ekr_v_1__heading {
+}

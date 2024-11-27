@@ -1,28 +1,43 @@
 .h1 {
-    margin-bottom: 30px;
     font-size: 66px;
     font-weight: 500;
     line-height: 110%;
 
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
     @include xl {
-        margin-bottom: 26px;
         font-size: 54px;
+
+        &:not(:last-child) {
+            margin-bottom: 26px;
+        }
     }
 
     @include lg {
-        margin-bottom: 24px;
         font-size: 44px;
         line-height: 130%;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
     }
 
     @include sm {
-        margin-bottom: 22px;
         font-size: 36px;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
     }
 
     @include xs {
-        margin-bottom: 20px;
         font-size: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 }
 
