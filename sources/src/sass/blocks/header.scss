@@ -1012,4 +1012,10 @@
         }
     }
 }
+
+.hide-on-xl {
+    @include xl {
+        display: none;
+    }
+}
 /* end of header_v_1 styles*/

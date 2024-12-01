@@ -321,25 +321,28 @@
 p,
 ul,
 ol {
+    margin-bottom: 16px;
     font-size: 16px;
 
-    &:not(:last-child) {
-        margin-bottom: 16px;
+    &:last-child {
+        margin-bottom: 0;
     }
 
     @include lg {
+        margin-bottom: 15px;
         font-size: 15px;
 
-        &:not(:last-child) {
-            margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
     @include xs {
+        margin-bottom: 14px;
         font-size: 14px;
 
-        &:not(:last-child) {
-            margin-bottom: 14px;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }
@@ -348,26 +351,32 @@ p {
     line-height: 160%;
 }
 
-ul,
-ol {
-    &:not(:last-child) {
-        margin-bottom: 16px;
-    }
-}
 ol {
     padding-left: 25px;
     list-style-type: decimal;
 }
+
 ul {
     padding-left: 25px;
     list-style-type: disc;
 }
+
 li {
     line-height: 160%;
+    margin-bottom: 4px;
 
-    &:not(:last-child) {
-        margin-bottom: 4px;
+    &:last-child {
+        margin-bottom: 0;
     }
+}
+
+.p,
+.ul,
+.ol,
+.heading {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
 }
 
 .mb_30 {
@@ -507,7 +516,7 @@ li {
     }
 }
 strong {
-    font-size: 700px;
+    font-weight: 700px;
 }
 em {
     font-style: italic;
@@ -551,7 +560,7 @@ a {
 .btn_large {
     min-width: 310px;
     min-height: 54px;
-    padding: 11px 60px;
+    padding: 11px 12px;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
