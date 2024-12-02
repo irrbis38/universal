@@ -268,6 +268,62 @@ var initSlider = (sliderContainer) => {
     });
 };
 
+// ========== FORM VALIDATION
+
+var initInputCheck = (formElements) => {
+    formElements.forEach((el) => {
+        el.addEventListener("input", () => {
+            el.classList.remove("error");
+        });
+    });
+};
+
+var doFormValidation = (formElements) => {
+    var requiredElements = formElements.filter((el) => {
+        return el.required;
+    });
+
+    requiredElements.length > 0 &&
+        requiredElements.forEach((el) => {
+            if (!el.value) {
+                el.classList.add("error");
+            } else {
+                el.classList.remove("error");
+            }
+        });
+};
+
+var checkErorrs = (formElements) => {
+    var isErrorConsist = formElements.some((el) =>
+        el.classList.contains("error")
+    );
+    return !isErrorConsist;
+};
+
+var initFormValidation = (forms) => {
+    if (forms.length < 0) return;
+
+    forms.forEach((form) => {
+        var inputs = Array.from(form.querySelectorAll(".js-input"));
+
+        inputs.length > 0 && initInputCheck(inputs);
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            doFormValidation(inputs);
+
+            var checkResult = checkErorrs(inputs);
+
+            if (checkResult) {
+                form.reset();
+
+                // feedback.classList.add("success");
+            }
+        });
+    });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     // init header
     var header = document.querySelector(".header_v_1_art6");
@@ -279,4 +335,10 @@ document.addEventListener("DOMContentLoaded", () => {
     var sliderContainer = document.querySelector(".slider-v-1__container");
 
     sliderContainer && initSlider(sliderContainer);
+
+    // init form validation
+
+    var forms = document.querySelectorAll(".js-form");
+
+    forms.length > 0 && initFormValidation(forms);
 });

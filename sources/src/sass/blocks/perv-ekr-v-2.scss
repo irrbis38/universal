@@ -103,6 +103,8 @@
     }
 
     @include sm {
+        position: relative;
+        z-index: 2;
         order: 2;
         padding: 40px 36px;
     }
@@ -251,6 +253,7 @@
     padding: 11px 24px;
     background-color: $color_btn_blue;
     border-color: $color_btn_blue;
+    border-width: 2px;
 
     @media (hover: hover) {
         &:hover {

@@ -126,6 +126,8 @@
     }
 
     @include sm {
+        position: relative;
+        z-index: 2;
         max-width: 100%;
     }
 }
@@ -294,6 +296,7 @@
     padding: 11px 24px;
     background-color: $color_btn_blue;
     border-color: $color_btn_blue;
+    border-width: 2px;
 
     @media (hover: hover) {
         &:hover {

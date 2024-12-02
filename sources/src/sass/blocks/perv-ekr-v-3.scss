@@ -34,7 +34,7 @@
 
     @include sm {
         max-width: 100%;
-        margin-bottom: -100px;
+        margin-bottom: -170px;
     }
 
     @include xs {
@@ -51,6 +51,10 @@
 
 .perv_ekr_v_3__color_text {
     color: #ff8a3d;
+}
+
+.perv_ekr_v_3__benefits {
+    min-height: 100px;
 }
 
 .perv_ekr_v_3__heading {
@@ -94,16 +98,16 @@
 .perv_ekr_v_3__form_content {
     position: relative;
     z-index: 1;
-    padding: 50px 72px;
+    padding: 41px 42px;
     background-color: $color_white;
     border-radius: 3px;
 
     @include xl {
-        padding: 45px 65px;
+        padding: 36px 35px;
     }
 
     @include lg {
-        padding: 38px 55px;
+        padding: 31px;
     }
 
     @include sm {
@@ -211,6 +215,10 @@
         color: $color_grey_text;
     }
 
+    &.error {
+        border-color: $color_error;
+    }
+
     @include xl {
         height: 51px;
         padding: 5px 15px;
@@ -255,6 +263,7 @@
     padding: 11px 24px;
     background-color: $color_btn_blue;
     border-color: $color_btn_blue;
+    border-width: 2px;
 
     @media (hover: hover) {
         &:hover {

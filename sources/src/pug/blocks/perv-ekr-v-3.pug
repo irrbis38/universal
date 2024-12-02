@@ -6,14 +6,15 @@ section.perv_ekr_v_3
 
             h1.h1.perv_ekr_v_3__title Сэндвич-панели #[span.perv_ekr_v_3__color_text напрямую!!!!!!!!!]
 
-            h3.h3.perv_ekr_v_3__heading - по доступным #[strong ценам] !!!!!!!!!!!!!!!!!!!!!!!!!!
+            .perv_ekr_v_3__benefits
 
-            h3.h3.perv_ekr_v_3__heading - по #[strong доступным] ценам!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
+                h3.h3.perv_ekr_v_3__heading - по доступным #[strong ценам] !!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-        form.perv_ekr_v_3__form(action="#")
+
+
+
+        form.perv_ekr_v_3__form.js-form(action="#" novalidate)
 
             .perv_ekr_v_3__form_content
 
@@ -25,9 +26,9 @@ section.perv_ekr_v_3
 
                     input.input.perv_ekr_v_3__form_input(type="text" placeholder="Ваше имя")
 
-                    input.input.perv_ekr_v_3__form_input(type="text" placeholder="Номер телефона")
+                    input.input.perv_ekr_v_3__form_input.js-input(type="text" placeholder="Номер телефона" required)
 
-                    button.button.btn_blue.btn_large.perv_ekr_v_3__form_submit(type="button") Получить предложение
+                    button.button.btn_blue.btn_large.perv_ekr_v_3__form_submit.js-submit(type="submit") Получить предложение
 
                 .perv_ekr_v_3__form_policy Заполняя эту форму, вы соглашаетесь с #[a(href="#") политикой конфиденциальности]
 
