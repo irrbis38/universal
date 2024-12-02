@@ -243,12 +243,16 @@
     padding: 5px 19px;
     border: 2px solid $color_grey_line;
     border-radius: 3px;
+    color: $color_black_main;
 
     &,
     &::placeholder {
         font-family: inherit;
         font-weight: 400;
         font-size: 18px;
+    }
+
+    &::placeholder {
         color: $color_grey_text;
     }
 

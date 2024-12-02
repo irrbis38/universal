@@ -254,12 +254,17 @@
     background-color: $color_btn_blue;
     border-color: $color_btn_blue;
     border-width: 2px;
+    color: $color_black_main;
 
-    @media (hover: hover) {
-        &:hover {
-            color: $color_btn_blue;
-            background-color: $color_white;
-        }
+    &,
+    &::placeholder {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    &::placeholder {
+        color: $color_grey_text;
     }
 
     @include xl {
