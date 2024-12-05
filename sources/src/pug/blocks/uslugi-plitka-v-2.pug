@@ -1,0 +1,61 @@
+-
+    let uslugiPlitkaData2 = [
+        {
+            img: './images/uslugi-plitka/uslugi-plitka-1',
+            text: 'Полы для дома'
+        },
+        {
+            img: './images/uslugi-plitka/uslugi-plitka-2',
+            text: 'Отделка стен'
+        },
+        {
+            img: './images/uslugi-plitka/uslugi-plitka-3',
+            text: 'Изготовление металлоконструкций'
+        },
+        {
+            img: './images/uslugi-plitka/uslugi-plitka-4',
+            text: 'Декор и отделка наружной части здания по вашим эскизам'
+        },
+        {
+            img: './images/uslugi-plitka/uslugi-plitka-5',
+            text: 'Облицовка наружного фасада здания'
+        },
+        {
+            img: './images/uslugi-plitka/uslugi-plitka-1',
+            text: 'Полы для дома'
+        }
+    ]
+
+.mt_small
+
+.uslugi_plitka_v_2
+
+    .container
+
+        .uslugi_plitka_v_2__container
+
+            h1.h1.uslugi_plitka_v_2__title Н1: Направления 
+
+            p.p.uslugi_plitka_v_2__subtitle Производим сэндвич-панели #[strong для любых задач]
+
+            .mt_small.uslugi_plitka_v_2__wrapper
+
+                each item in uslugiPlitkaData2
+
+                    .uslugi_plitka_v_2__item
+
+                        a.uslugi_plitka_v_2__link(href="#") 
+
+                        .uslugi_plitka_v_2__img
+                            picture
+                                source(media="(min-width: 992px)" srcset= item.img + ".webp" type="image/webp")
+                                source(media="(max-width: 991px)"  srcset= item.img + "-mob.webp" type="image/webp")
+                                img(src= item.img + ".webp" alt="" width="360" height="240" decoding="async")
+
+
+                        span.uslugi_plitka_v_2__name #{item.text} #[span.uslugi_plitka_v_2__arrow]
+
+
+            button.button.btn_bordered_arrow.uslugi_plitka_v_2__button(type="button") Все услуги
+
+

@@ -420,7 +420,7 @@ li {
     font-style: italic;
 }
 
-.mb_big {
+.mt_big {
     margin-top: 200px;
 
     @include xl {
@@ -437,7 +437,7 @@ li {
     }
 }
 
-.mb_middle {
+.mt_middle {
     margin-top: 140px;
     @include xl {
         margin-top: 108px;
@@ -453,7 +453,7 @@ li {
     }
 }
 
-.mb_small {
+.mt_small {
     margin-top: 60px;
     @include xl {
         margin-top: 54px;
@@ -643,6 +643,20 @@ a {
     //     border: 1.5px solid var(--color-green-active, #085e2c);
     //     background-color: var(--color-green-active, #085e2c);
     // }
+}
+
+.btn_bordered_arrow {
+    display: inline-block;
+    height: 48px;
+    padding: 12px 21px;
+    border-radius: 3px;
+    border: 1.5px solid var(--color-siniy);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-siniy);
 }
 
 .phone_link,
