@@ -107,7 +107,7 @@
     }
 
     @include xs {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
@@ -143,6 +143,7 @@
     }
 
     @include lg {
+        top: 3px;
         width: 18px;
         height: 17px;
     }

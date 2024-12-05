@@ -1,3 +1,5 @@
+"use strict";
+
 var initHeader = (header) => {
     var menuBtn = header.querySelector(".header_v_1_art6__menu_btn"),
         mobileBtn = header.querySelector(".header_v_1_art6__show_mobile"),
@@ -324,6 +326,97 @@ var initFormValidation = (forms) => {
     });
 };
 
+var initNashiRabotySliders = (container) => {
+    var fullSliderEl = container.querySelector(".nashi-raboty-v1__full_slider");
+    var previewSliderEl = container.querySelector(
+        ".nashi-raboty-v1__thumb_slider"
+    );
+
+    if (!fullSliderEl || !previewSliderEl) return;
+
+    var previewSlider = new Swiper(previewSliderEl, {
+        slidesPerView: 3,
+        spaceBetween: 12,
+        loop: false,
+        brakepoints: {
+            768: {
+                spaceBetween: 10,
+            },
+            992: {
+                spaceBetween: 14,
+            },
+            1301: {
+                spaceBetween: 17,
+            },
+            1601: {
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    var fullSlider = new Swiper(fullSliderEl, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: false,
+        thumbs: {
+            swiper: previewSlider,
+        },
+        navigation: {
+            prevEl: ".nashi-raboty-v1__full_prev",
+            nextEl: ".nashi-raboty-v1__full_next",
+        },
+    });
+};
+
+// init video
+
+var initVKVideo = (videos) => {
+    // generate video url
+
+    var generateUrl = (num, id) => {
+        var query = "&hd=2&autoplay=1";
+        return "https://vk.com/video_ext.php?oid=-" + num + "&id=" + id + query;
+    };
+
+    // create iframe element
+    var createIframe = (num, id) => {
+        var iframe = document.createElement("iframe");
+        iframe.classList.add("video-iframe");
+        iframe.setAttribute("src", generateUrl(num, id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute(
+            "allow",
+            "autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+        );
+
+        return iframe;
+    };
+
+    // handling each video element
+    videos.forEach((el) => {
+        var videoHref = el.dataset.video;
+        var deletedLength = "https://vk.com/video-".length;
+
+        var videoFull = videoHref
+            .substring(deletedLength, videoHref.length)
+            .split("_");
+
+        var videoPlayBtn = el.querySelector(".video-play-btn");
+
+        var videoPlayBtnHandler = (e) => {
+            var button = e.target;
+            var iframe = createIframe(videoFull[0], videoFull[1]);
+            el.querySelector(".nashi-raboty-v1__full_pic").remove();
+            button.removeEventListener("click", videoPlayBtnHandler);
+            button.remove();
+            el.append(iframe);
+        };
+
+        videoPlayBtn.addEventListener("click", videoPlayBtnHandler);
+    });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     // init header
     var header = document.querySelector(".header_v_1_art6");
@@ -341,4 +434,20 @@ document.addEventListener("DOMContentLoaded", () => {
     var forms = document.querySelectorAll(".js-form");
 
     forms.length > 0 && initFormValidation(forms);
+
+    // init nashi-raboty sliders
+
+    var nashiRabotySlidersContainers = document.querySelectorAll(
+        ".nashi-raboty-v1__sliders"
+    );
+
+    nashiRabotySlidersContainers.length > 0 &&
+        nashiRabotySlidersContainers.forEach((container) =>
+            initNashiRabotySliders(container)
+        );
+
+    // get all video elements on the page
+    var videos = Array.from(document.querySelectorAll(".video-block"));
+
+    videos.length > 0 && initVKVideo(videos);
 });

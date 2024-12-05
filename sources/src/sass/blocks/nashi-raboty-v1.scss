@@ -1,0 +1,398 @@
+.nashi-raboty-v1__container {
+    position: relative;
+}
+
+.nashi-raboty-v1__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 130%;
+    color: var(--color-chernyy);
+
+    @include xl {
+        font-size: 24px;
+    }
+
+    @include lg {
+        font-size: 20px;
+    }
+
+    @include xs {
+        font-size: 18px;
+    }
+}
+
+.nashi-raboty-v1__item {
+    display: flex;
+    gap: 0 60px;
+
+    @include xl {
+        gap: 0 52px;
+    }
+
+    @include lg {
+        gap: 0 35px;
+    }
+
+    @include md {
+        gap: 0 20px;
+    }
+
+    @include xs {
+        display: block;
+    }
+}
+
+.nashi-raboty-v1__sliders,
+.nashi-raboty-v1__descr {
+    flex: 1 1 50%;
+    width: 50%;
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+// SLIDERS
+
+.nashi-raboty-v1__sliders {
+    max-width: 740px;
+
+    @include xs {
+        margin-bottom: 30px;
+    }
+}
+
+.nashi-raboty-v1__full_slider {
+    position: relative;
+    margin-bottom: 21px;
+
+    @include xl {
+        margin-bottom: 17px;
+    }
+
+    @include lg {
+        margin-bottom: 14px;
+    }
+
+    @include md {
+        margin-bottom: 10px;
+    }
+
+    @include xs {
+        margin-bottom: 12px;
+    }
+}
+
+.nashi-raboty-v1__full_slide,
+.nashi-raboty-v1__thumb_slide {
+    border-radius: 3px;
+    overflow: hidden;
+    height: auto;
+
+    picture,
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.nashi-raboty-v1__full_slide {
+    iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.nashi-raboty-v1__thumb_slide {
+    cursor: pointer;
+}
+
+.nashi-raboty-v1__full_navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    pointer-events: none;
+
+    transform: translateY(-50%);
+}
+
+.nashi-raboty-v1__full_prev,
+.nashi-raboty-v1__full_next {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    pointer-events: all;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.8;
+    transition: opacity $transition;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='3' transform='matrix(-1 0 0 1 40 0)' fill='%23FEFEFE' /%3E%3Cpath d='M17.6316 26.6842L25 20.1471L17.6316 13' stroke='%234A4A51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+
+    @media (hover: hover) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @include xl {
+        width: 34px;
+        height: 34px;
+    }
+
+    @include lg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.nashi-raboty-v1__full_prev {
+    transform: rotateY(180deg);
+}
+
+// DESCR
+
+.nashi-raboty-v1__heading {
+    margin-bottom: 36px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--color-chernyy);
+
+    @include xl {
+        margin-bottom: 28px;
+        font-size: 32px;
+    }
+
+    @include lg {
+        margin-bottom: 24px;
+        font-size: 26px;
+    }
+
+    @include md {
+        margin-bottom: 14px;
+        font-size: 24px;
+    }
+
+    @include xs {
+        margin-bottom: 18px;
+        font-size: 22px;
+    }
+}
+
+.nashi-raboty-v1__text {
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--color-chernyy);
+
+    @include xl {
+        margin-bottom: 28px;
+        font-size: 16px;
+    }
+
+    @include lg {
+        margin-bottom: 24px;
+        font-size: 14px;
+    }
+
+    @include md {
+        margin-bottom: 18px;
+    }
+}
+
+.nashi-raboty-v1__features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    margin-bottom: 36px;
+
+    @include xl {
+        margin-bottom: 28px;
+    }
+
+    @include lg {
+        margin-bottom: 24px;
+    }
+
+    @include md {
+        margin-bottom: 18px;
+    }
+
+    @include xs {
+        gap: 18px 0;
+        margin-bottom: 30px;
+    }
+}
+
+.nashi-raboty-v1__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 20px;
+
+    @include xl {
+        gap: 17px 0;
+    }
+
+    @include lg {
+        gap: 13px 0;
+    }
+
+    @include md {
+        gap: 10px 0;
+    }
+
+    @include xs {
+        display: block;
+
+        span {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+}
+
+.nashi-raboty-v1__name {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-seryy-tekst);
+
+    @include xl {
+        font-size: 17px;
+    }
+
+    @include lg {
+        font-size: 14px;
+    }
+
+    @include xs {
+        margin-bottom: 8px;
+        line-height: 140%;
+    }
+}
+
+.nashi-raboty-v1__value {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: right;
+    color: var(--color-chernyy);
+
+    @include xl {
+        font-size: 17px;
+    }
+
+    @include lg {
+        font-size: 14px;
+    }
+
+    @include xs {
+        line-height: 140%;
+    }
+}
+
+.nashi-raboty-v1__more {
+    @include xs {
+        width: 100%;
+    }
+}
+
+.nashi-raboty-v1__button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    gap: 0 7px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
+    color: var(--color-green);
+    border-color: var(--color-green);
+    transition: color $transition, background-color $transition;
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--color-belyy, #fcfcfc);
+            background-color: var(--color-green);
+
+            &::before {
+                transform: rotate(-45deg);
+                opacity: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                opacity: 1;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: opacity $transition, transform $transition;
+    }
+
+    &::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0969L11.0503 7.33319L7.19727 3.56946' stroke='%2309893E' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63794 6.66658C1.26974 6.66658 0.971264 6.96506 0.971264 7.33325C0.971264 7.70145 1.26974 7.99993 1.63794 7.99993L1.63794 6.66658ZM10.4449 6.66658L1.63794 6.66658L1.63794 7.99993L10.4449 7.99993L10.4449 6.66658Z' fill='%2309893E' /%3E%3C/svg%3E");
+    }
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23fff' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23fff' /%3E%3C/svg%3E");
+        opacity: 0;
+    }
+
+    @include xs {
+        position: relative;
+        top: unset;
+        right: unset;
+        display: flex;
+        margin: 40px auto 0;
+    }
+}
+
+// video
+
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='35' fill='%23FEFEFE' /%3E%3Cpath d='M51.5 34.134C52.1667 34.5189 52.1667 35.4811 51.5 35.866L27.5 49.7224C26.8333 50.1073 26 49.6262 26 48.8564L26 21.1436C26 20.3738 26.8333 19.8927 27.5 20.2776L51.5 34.134Z' fill='%234A4A51' /%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    transition: opacity $transition;
+    cursor: pointer;
+
+    @media (hover: hover) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
