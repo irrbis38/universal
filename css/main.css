@@ -4909,7 +4909,7 @@ a {
 }
 @media (max-width:767px) {
   .uslugi_plitka_v_2__arrow {
-    top: 2px
+    top: 5px
   }
 }
 .uslugi_plitka_v_2__button {
@@ -5129,7 +5129,7 @@ a {
 }
 @media (max-width:767px) {
   .uslugi_plitka_v_3__arrow {
-    top: 2px
+    top: 5px
   }
 }
 .uslugi_plitka_v_3__button {
@@ -5330,7 +5330,7 @@ a {
 }
 @media (max-width:767px) {
   .uslugi-perechisleniye-variant-1__arrow {
-    top: 2px
+    top: 5px
   }
 }
 .uslugi-perechisleniye-variant-1__button {
@@ -5536,7 +5536,7 @@ a {
 }
 @media (max-width:767px) {
   .uslugi-perechisleniye-variant-2__arrow {
-    top: 2px
+    top: 5px
   }
 }
 .uslugi-perechisleniye-variant-2__button {
@@ -5622,8 +5622,14 @@ a {
     font-size: 20px
   }
 }
+@media (max-width:1200px) {
+  .nashi-raboty-v1__subtitle {
+    max-width: 468px
+  }
+}
 @media (max-width:767px) {
   .nashi-raboty-v1__subtitle {
+    max-width: 100%;
     font-size: 18px
   }
 }
@@ -5720,6 +5726,25 @@ a {
 .nashi-raboty-v1__thumb_slide {
   cursor: pointer
 }
+.nashi-raboty-v1__thumb_slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border: 2px solid #8e8e93;
+  opacity: 0;
+  transition: opacity .2s ease-out
+}
+.nashi-raboty-v1__thumb_slide.swiper-slide-thumb-active {
+  position: relative
+}
+.nashi-raboty-v1__thumb_slide.swiper-slide-thumb-active::before {
+  opacity: 1
+}
 .nashi-raboty-v1__full_navigation {
   position: absolute;
   top: 50%;
@@ -5739,6 +5764,7 @@ a {
 }
 .nashi-raboty-v1__full_next,
 .nashi-raboty-v1__full_prev {
+  position: relative;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -5748,12 +5774,39 @@ a {
   background-position: center;
   background-size: contain;
   opacity: .8;
-  transition: opacity .2s ease-out;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='3' transform='matrix(-1 0 0 1 40 0)' fill='%23FEFEFE' /%3E%3Cpath d='M17.6316 26.6842L25 20.1471L17.6316 13' stroke='%234A4A51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E")
+  transition: opacity .2s ease-out
+}
+.nashi-raboty-v1__full_next::after,
+.nashi-raboty-v1__full_next::before,
+.nashi-raboty-v1__full_prev::after,
+.nashi-raboty-v1__full_prev::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity .2s ease-out
+}
+.nashi-raboty-v1__full_next::before,
+.nashi-raboty-v1__full_prev::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='3' transform='matrix(-1 0 0 1 40 0)' fill='%23FEFEFE' fill-opacity='0.8' /%3E%3Cpath d='M17.6316 26.6842L25 20.1471L17.6316 13' stroke='%238E8E93' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E")
+}
+.nashi-raboty-v1__full_next::after,
+.nashi-raboty-v1__full_prev::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='3' transform='matrix(-1 0 0 1 40 0)' fill='%23FEFEFE' /%3E%3Cpath d='M17.6316 26.6842L25 20.1471L17.6316 13' stroke='%234A4A51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+  opacity: 0
 }
 @media (hover:hover) {
-  .nashi-raboty-v1__full_next:hover,
-  .nashi-raboty-v1__full_prev:hover {
+  .nashi-raboty-v1__full_next:hover::before,
+  .nashi-raboty-v1__full_prev:hover::before {
+    opacity: 0
+  }
+  .nashi-raboty-v1__full_next:hover::after,
+  .nashi-raboty-v1__full_prev:hover::after {
     opacity: 1
   }
 }
@@ -6023,19 +6076,48 @@ a {
   display: inline-block;
   width: 70px;
   height: 70px;
-  background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='35' fill='%23FEFEFE' /%3E%3Cpath d='M51.5 34.134C52.1667 34.5189 52.1667 35.4811 51.5 35.866L27.5 49.7224C26.8333 50.1073 26 49.6262 26 48.8564L26 21.1436C26 20.3738 26.8333 19.8927 27.5 20.2776L51.5 34.134Z' fill='%234A4A51' /%3E%3C/svg%3E");
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer
+}
+.video-play-btn::after,
+.video-play-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
   background-size: contain;
-  opacity: .8;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  transition: opacity .2s ease-out;
-  cursor: pointer
+  transition: opacity .2s ease-out
+}
+.video-play-btn::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='35' fill='%23FEFEFE' fill-opacity='0.8' /%3E%3Cpath d='M51.5 34.134C52.1667 34.5189 52.1667 35.4811 51.5 35.866L27.5 49.7224C26.8333 50.1073 26 49.6262 26 48.8564L26 21.1436C26 20.3738 26.8333 19.8927 27.5 20.2776L51.5 34.134Z' fill='%238E8E93' /%3E%3C/svg%3E")
+}
+.video-play-btn::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='35' fill='%23FEFEFE' /%3E%3Cpath d='M51.5 34.134C52.1667 34.5189 52.1667 35.4811 51.5 35.866L27.5 49.7224C26.8333 50.1073 26 49.6262 26 48.8564L26 21.1436C26 20.3738 26.8333 19.8927 27.5 20.2776L51.5 34.134Z' fill='%234A4A51' /%3E%3C/svg%3E");
+  opacity: 0
 }
 @media (hover:hover) {
-  .video-play-btn:hover {
+  .video-play-btn:hover::before {
+    opacity: 0
+  }
+  .video-play-btn:hover::after {
     opacity: 1
+  }
+}
+@media (max-width:1600px) {
+  .video-play-btn {
+    width: 60px;
+    height: 60px
+  }
+}
+@media (max-width:1300px) {
+  .video-play-btn {
+    width: 48px;
+    height: 48px
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
