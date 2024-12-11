@@ -1,0 +1,65 @@
+-
+
+    const video_v_1_data = [
+        {
+            img: './images/video_v_1/video-preview-1.webp',
+            name: 'Полков Денис ',
+            role: 'Директор компании ООО Тандер'
+        },
+        {
+            img: './images/video_v_1/video-preview-2.webp',
+            name: 'Дацков Кирилл Алексендрович',
+            role: 'Главный руководитель отдела строительства в компании ООО КровСтрой'
+        },
+        {
+            img: './images/video_v_1/video-preview-3.webp',
+            name: 'Полковвин Абдурахмангаджи Владимирович',
+            role: 'Заместитель директора компании МАГНИТ'
+        },
+        {
+            img: './images/video_v_1/video-preview-2.webp',
+            name: 'Полков Денис',
+            role: 'Директор компании ООО Тандер'
+        },
+        {
+            img: './images/video_v_1/video-preview-3.webp',
+            name: 'Полковвин Абдурахмангаджи Владимирович ',
+            role: ''
+        },
+        {
+            img: './images/video_v_1/video-preview-1.webp',
+            name: 'Полков Денис ',
+            role: 'Заместитель директора компании МАГНИТ'
+        },
+    ]
+
+.mt_small
+
+.video_v_1
+
+    .container
+
+        .video_v_1__container
+
+            h1.h1.video_v_1__title Только честные отзывы
+
+            p.p.video_v_1__subtitle Главный показатель качества нашей работы - это ваши благодарные отзывы!
+
+            .video_v_1__wrapper
+
+                each item in video_v_1_data
+
+                    .video_v_1__item 
+
+                        .video_v_1__media.video-block(data-video="https://vk.com/video-66369027_456239546")
+                            button.button.video-play-btn(type="button" aria-label="Начать показ видео")
+                            img.js-video-preview(src= item.img alt="" width="630" height="420" decoding="async")
+
+                        span.video_v_1__name= item.name
+
+                        span.video_v_1__role= item.role
+
+
+            button.button.btn_bordered_arrow.video_v_1__button(type="button") узнать подробнее
+
+

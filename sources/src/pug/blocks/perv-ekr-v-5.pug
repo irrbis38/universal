@@ -1,0 +1,77 @@
+section.perv_ekr_v_5
+
+    .perv_ekr_v_5__bg
+        picture
+            source(media="(min-width: 992px)" srcset="./images/perv_ekr_5/perv_ekr_5_bg.webp" type="image/webp")
+            source(media="(max-width: 991px)" srcset="./images/perv_ekr_5/perv_ekr_5_bg_mob.webp" type="image/webp")
+            img(src="./images/perv_ekr_5/perv_ekr_5_bg.webp" alt="" width="1920" height="756" decoding="async")
+
+    .container.perv_ekr_v_5__container
+
+        .perv_ekr_v_5__info
+
+            h1.h1_xs.perv_ekr_v_5__title #[span.perv_ekr_v_5__blue сэндвич-панели] от производителя!!!!!!!!!!!!!!
+
+            h4.h4.perv_ekr_v_5__heading Панели для строительства быстровозводимых и !!!!!!!!!!!!!!!энергоэффективных зданий
+
+            .perv_ekr_v_5__benefits_list
+
+                -
+                    const benefitsListData5 = [
+                        {
+                            icon: './images/perv_ekr_5/icon-1.svg',
+                            name: 'Собственное производство',
+                            text: 'Полный цикл современного производства сэндвич-панелей и комплектующих',
+                        },
+                        {
+                            icon: './images/perv_ekr_5/icon-2.svg',
+                            name: 'Склад готовых позиций',
+                            text: 'Всегда в наличии сэндвич-панели 1-го и 2-го сорта на собственном складе',
+                        },
+                        {
+                            icon: './images/perv_ekr_5/icon-3.svg',
+                            name: 'Опыт более 15 лет',
+                            text: 'Огромный опыт комплектации строительных объектов нашей продукцией',
+                        },
+                        {
+                            icon: './images/perv_ekr_5/icon-4.svg',
+                            name: 'Комплексный подход',
+                            text: 'Проектирование, производство, доставка, монтаж «под ключ»',
+                        },
+                    ]
+
+                each item in benefitsListData5
+
+                    .perv_ekr_v_5__benefits_item 
+
+                        .perv_ekr_v_5__benefits_icon
+
+                            img(src= item.icon alt="" width="50" height="50" decoding="async")
+
+                        .perv_ekr_v_5__benefits_descr 
+
+                            span.perv_ekr_v_5__benefits_name #{item.name}
+
+                            span.perv_ekr_v_5__benefits_text #{item.text}
+
+
+
+
+        form.perv_ekr_v_5__form.js-form(action="#" novalidate)
+
+            .perv_ekr_v_5__form_content
+
+                p.p.perv_ekr_v_5__form_name Оставьте заявку на подбор материалов
+
+                p.p.perv_ekr_v_5__form_descr Мы детально проконсультируем и подберем наилучшее предложение
+
+                .perv_ekr_v_5__form_fieldset
+
+                    input.input.perv_ekr_v_5__form_input(type="text" placeholder="Ваше имя")
+
+                    input.input.perv_ekr_v_5__form_input.js-input(type="text" placeholder="Номер телефона*" required)
+
+                    button.button.btn_blue.btn_large.perv_ekr_v_5__form_submit.js-submit(type="submit") Получить предложение
+
+                .perv_ekr_v_5__form_policy Заполняя эту форму, вы соглашаетесь с #[a(href="#") политикой конфиденциальности]
+

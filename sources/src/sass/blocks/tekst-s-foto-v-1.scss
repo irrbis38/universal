@@ -1,0 +1,95 @@
+.tekst_s_foto_v_1__container {
+    display: grid;
+    grid-template-areas:
+        "title img"
+        "descr img";
+    grid-template-columns: 47% 49%;
+    grid-template-rows: auto 1fr;
+    gap: 0 4%;
+
+    @include lg {
+        grid-template-columns: 53.5% 43%;
+        gap: 0 3.5%;
+    }
+
+    @include xs {
+        display: block;
+    }
+}
+
+.tekst_s_foto_v_1__title {
+    grid-area: title;
+
+    @include xs {
+        margin-bottom: 24px;
+    }
+}
+
+.tekst_s_foto_v_1__img {
+    grid-area: img;
+
+    picture,
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @include xs {
+        margin-bottom: 34px;
+    }
+}
+
+.tekst_s_foto_v_1__descr {
+    grid-area: descr;
+}
+
+.tekst_s_foto_v_1__text {
+    margin-bottom: 50px;
+
+    p {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 130%;
+        color: var(--chernyy);
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include xl {
+        p {
+            font-size: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    @include lg {
+        p {
+            font-size: 18px;
+
+            &:not(:last-child) {
+                margin-bottom: 22px;
+            }
+        }
+    }
+
+    @include md {
+        p {
+            font-size: 16px;
+
+            &:not(:last-child) {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    @include xs {
+        margin-bottom: 44px;
+    }
+}

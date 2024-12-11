@@ -407,7 +407,7 @@ var initVKVideo = (videos) => {
         var videoPlayBtnHandler = (e) => {
             var button = e.target;
             var iframe = createIframe(videoFull[0], videoFull[1]);
-            el.querySelector(".nashi-raboty-v1__full_pic").remove();
+            el.querySelector(".js-video-preview").remove();
             button.removeEventListener("click", videoPlayBtnHandler);
             button.remove();
             el.append(iframe);

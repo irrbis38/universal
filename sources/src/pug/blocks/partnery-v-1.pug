@@ -1,0 +1,71 @@
+-
+    let partneryData = [
+        {
+            img: './images/partnery/partner-logo-1.webp',
+            text: 'Производитель стали ааааааааааааа'
+        },
+        {
+            img: './images/partnery/partner-logo-2.webp',
+            text: 'Роснефть'
+        },
+        {
+            img: './images/partnery/partner-logo-3.webp',
+            text: 'Нефтяная компания'
+        },
+        {
+            img: './images/partnery/partner-logo-1.webp',
+            text: 'Производитель стали'
+        },
+        {
+            img: './images/partnery/partner-logo-5.webp',
+            text: 'МВУ'
+        },
+        {
+            img: './images/partnery/partner-logo-3.webp',
+            text: 'Производитель стали'
+        },
+        {
+            img: './images/partnery/partner-logo-5.webp',
+            text: 'Роснефть'
+        },
+        {
+            img: './images/partnery/partner-logo-1.webp',
+            text: 'Нефтяная компания'
+        },
+        {
+            img: './images/partnery/partner-logo-2.webp',
+            text: 'Производитель стали'
+        },
+        {
+            img: './images/partnery/partner-logo-3.webp',
+            text: 'МВУ'
+        }
+    ]
+
+.mt_small
+
+.partnery_v_1
+
+    .container
+
+        .partnery_v_1__container
+
+            h1.h1.partnery_v_1__title Компании, которые нам доверяют  
+
+            p.p.partnery_v_1__subtitle Главный показатель качества нашей работы - это ваши благодарные отзывы!
+
+            .mt_small.partnery_v_1__wrapper
+
+                each item in partneryData
+
+                    .partnery_v_1__item
+
+                        .partnery_v_1__logo
+                            img(src= item.img alt="" width="300" height="182" decoding="async")
+
+                        span.partnery_v_1__name= item.text
+
+
+            button.button.btn_bordered_arrow.partnery_v_1__button(type="button") узнать подробнее
+
+

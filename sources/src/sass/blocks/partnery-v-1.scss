@@ -1,0 +1,202 @@
+.partnery_v_1__container {
+    position: relative;
+}
+
+.partnery_v_1__title {
+    width: 60%;
+    max-width: 880px;
+
+    @include lg {
+        max-width: 790px;
+    }
+
+    @include md {
+        max-width: 650px;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.partnery_v_1__subtitle {
+    width: 60%;
+    max-width: 880px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 130%;
+    color: var(--color-chernyy);
+
+    @include xl {
+        font-size: 24px;
+    }
+
+    @include lg {
+        max-width: 730px;
+        font-size: 20px;
+    }
+
+    @include md {
+        max-width: 650px;
+    }
+
+    @include xs {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+.partnery_v_1__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @include md {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include xs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.partnery_v_1__item {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+
+    &:last-child {
+        border-right: 1px solid rgb(221, 221, 221) !important;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+        border-top: 1px solid rgb(221, 221, 221);
+    }
+
+    &:nth-child(5n + 5) {
+        border-right: 1px solid rgb(221, 221, 221);
+    }
+
+    @include md {
+        &:nth-child(5) {
+            border-top: unset;
+        }
+
+        &:nth-child(5n + 5) {
+            border-right: unset;
+        }
+
+        &:nth-child(4n + 4) {
+            border-right: 1px solid rgb(221, 221, 221);
+        }
+    }
+
+    @include xs {
+        &:nth-child(3),
+        &:nth-child(4) {
+            border-top: unset;
+        }
+
+        &:nth-child(4n + 4) {
+            border-right: unset;
+        }
+
+        &:nth-child(2n + 2) {
+            border-right: 1px solid rgb(221, 221, 221);
+        }
+    }
+}
+
+.partnery_v_1__logo {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.partnery_v_1__name {
+    display: block;
+    width: 100%;
+    padding: 10px 23px 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000;
+
+    @include xl {
+        padding: 8px 20px 28px;
+        font-size: 14px;
+    }
+
+    @include lg {
+        padding: 6px 15px 20px;
+    }
+
+    @include md {
+        padding: 5px 14px 20px;
+    }
+}
+
+.partnery_v_1__button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    gap: 0 7px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
+    transition: color $transition, background-color $transition;
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--color-belyy, #fcfcfc);
+            background-color: var(--color-siniy, #355ddb);
+
+            &::before {
+                transform: rotate(-45deg);
+                opacity: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                opacity: 1;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: opacity $transition, transform $transition;
+    }
+
+    &::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23355DDB' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23355DDB' /%3E%3C/svg%3E");
+    }
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23fff' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23fff' /%3E%3C/svg%3E");
+        opacity: 0;
+    }
+
+    @include xs {
+        position: relative;
+        top: unset;
+        right: unset;
+        margin: 40px auto 0;
+    }
+}

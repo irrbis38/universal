@@ -1,0 +1,483 @@
+.perv_ekr_v_5 {
+    position: relative;
+    z-index: 1;
+    padding: 101px 0;
+
+    @include xl {
+        padding: 62px 0;
+    }
+
+    @include lg {
+        padding: 50px 0;
+    }
+
+    @include sm {
+        padding: 45px 0 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(6px);
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.9) 44.84%,
+            rgba(255, 255, 255, 0.65) 55.2%,
+            rgba(255, 255, 255, 0.2) 81.21%
+        );
+
+        @include xs {
+            height: auto;
+            bottom: 213px;
+        }
+    }
+}
+
+.perv_ekr_v_5__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    picture,
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include xs {
+        height: auto;
+        bottom: 213px;
+    }
+}
+
+.perv_ekr_v_5__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 85px;
+
+    @include xl {
+        gap: 0 45px;
+    }
+
+    @include sm {
+        display: block;
+    }
+}
+
+.perv_ekr_v_5__info {
+    flex: 1 1 auto;
+    max-width: 64%;
+
+    @include md {
+        max-width: 100%;
+        // margin-bottom: -38px;
+        margin-bottom: 40px;
+    }
+}
+
+.perv_ekr_v_5__title {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $color_black;
+}
+
+.perv_ekr_v_5__blue {
+    display: block;
+    color: $color_btn_blue;
+
+    @include xs {
+        display: inline;
+    }
+}
+
+.perv_ekr_v_5__heading {
+    width: 92.71%;
+    font-weight: 400;
+    color: $color_black;
+
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    @include xl {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    @include lg {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include md {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.perv_ekr_v_5__benefits_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 860px;
+
+    @include xl {
+        gap: 50px;
+        max-width: 746px;
+    }
+
+    @include lg {
+        gap: 40px;
+        max-width: 620px;
+    }
+
+    @include md {
+        gap: 30px;
+    }
+
+    @include xs {
+        display: flex;
+        flex-direction: column;
+        gap: 30px 0;
+    }
+}
+
+.perv_ekr_v_5__benefits_item {
+    display: flex;
+    gap: 0 20px;
+
+    @include xl {
+        gap: 0 18px;
+    }
+
+    @include lg {
+        gap: 0 10px;
+    }
+
+    @include xs {
+        gap: 0 20px;
+    }
+}
+
+.perv_ekr_v_5__benefits_icon {
+    flex: 0 0 auto;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @include xl {
+        width: 40px;
+        height: 40px;
+    }
+
+    @include lg {
+        width: 30px;
+        height: 30px;
+    }
+
+    @include xs {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.perv_ekr_v_5__benefits_name {
+    display: block;
+    width: 100%;
+    margin-bottom: 9px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: #000;
+
+    @include xl {
+        margin-bottom: 6px;
+        font-size: 16px;
+    }
+}
+
+.perv_ekr_v_5__benefits_text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000;
+
+    @include xl {
+        font-size: 14px;
+    }
+}
+
+// form
+
+.perv_ekr_v_5__form {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    width: 448px;
+
+    @include xl {
+        width: 408px;
+    }
+
+    @include lg {
+        width: 340px;
+    }
+
+    @include sm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.perv_ekr_v_5__form_content {
+    position: relative;
+
+    z-index: 1;
+    padding: 52px 42px 47px;
+    background-color: $color_white;
+    border-radius: 3px;
+
+    @include xl {
+        padding: 47px 38px 48px;
+    }
+
+    @include lg {
+        padding: 40px 32px 36px;
+    }
+
+    @include sm {
+        z-index: 2;
+        order: 2;
+        padding: 40px 36px 43px;
+    }
+
+    @include xs {
+        padding: 36px 30px 36px;
+        border: 2px solid $color_grey_line;
+    }
+}
+
+.perv_ekr_v_5__form_name {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: $color_black;
+
+    @include xl {
+        margin-bottom: 12px;
+        font-size: 23px;
+    }
+
+    @include lg {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    @include sm {
+        margin-bottom: 5px;
+    }
+
+    @include xs {
+        margin-bottom: 9px;
+    }
+}
+
+.perv_ekr_v_5__form_descr {
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    color: $color_black;
+
+    @include xl {
+        margin-bottom: 32px;
+        font-size: 18px;
+    }
+
+    @include lg {
+        margin-bottom: 28px;
+        font-size: 15px;
+    }
+
+    @include sm {
+        margin-bottom: 22px;
+    }
+
+    @include xs {
+        margin-bottom: 28px;
+    }
+}
+
+.perv_ekr_v_5__form_fieldset {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include xl {
+        margin-bottom: 9px;
+    }
+
+    @include lg {
+        margin-bottom: 8px;
+    }
+
+    @include sm {
+        flex-direction: row;
+        gap: 0 14px;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+
+    @include xs {
+        flex-direction: column;
+    }
+}
+
+.perv_ekr_v_5__form_input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 22px;
+    padding: 5px 19px;
+    border: 2px solid $color_grey_line;
+    border-radius: 3px;
+    color: $color_black_main;
+
+    &,
+    &::placeholder {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    &::placeholder {
+        color: $color_grey_text;
+    }
+
+    @include xl {
+        height: 51px;
+        padding: 5px 15px;
+
+        &,
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+
+    @include lg {
+        height: 42px;
+        padding: 5px 12px;
+
+        &,
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+
+    @include sm {
+        height: 47px;
+        margin-bottom: 0;
+        padding: 5px 15px;
+    }
+
+    @include xs {
+        height: 52px;
+        margin-bottom: 10px;
+        padding: 5px 18px;
+
+        &,
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+}
+
+.perv_ekr_v_5__form_submit {
+    min-width: auto;
+    margin-top: 14px;
+    background-color: $color_btn_blue;
+    border-color: $color_btn_blue;
+    border-width: 2px;
+
+    @media (hover: hover) {
+        &:hover {
+            color: $color_btn_blue;
+            background-color: $color_white;
+        }
+    }
+
+    @include xl {
+        min-height: 51px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    @include lg {
+        min-height: 42px;
+        font-size: 13px;
+    }
+
+    @include sm {
+        flex: 0 0 auto;
+        min-width: 238px;
+        min-height: 47px;
+        margin-top: 0;
+    }
+
+    @include xs {
+        min-width: unset;
+        min-height: 52px;
+        margin-top: 18px;
+    }
+}
+
+.perv_ekr_v_5__form_policy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    color: $color_grey_text2;
+
+    a {
+        display: inline-block;
+        width: 100%;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+    }
+
+    @include sm {
+        a {
+            display: inline;
+        }
+    }
+}
