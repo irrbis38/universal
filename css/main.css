@@ -743,8 +743,7 @@ textarea {
 }
 @media (max-width:1300px) {
   .h1 {
-    font-size: 44px;
-    line-height: 130%
+    font-size: 44px
   }
   .h1:not(:last-child) {
     margin-bottom: 24px
@@ -776,8 +775,7 @@ textarea {
 }
 @media (max-width:1600px) {
   .h1_xs {
-    font-size: 46px;
-    line-height: 130%
+    font-size: 46px
   }
   .h1_xs:not(:last-child) {
     margin-bottom: 26px
@@ -817,8 +815,7 @@ textarea {
 }
 @media (max-width:1600px) {
   .h2 {
-    font-size: 42px;
-    line-height: 130%
+    font-size: 42px
   }
   .h2:not(:last-child) {
     margin-bottom: 24px
@@ -871,8 +868,7 @@ textarea {
 }
 @media (max-width:991px) {
   .h2_xs {
-    font-size: 22px;
-    line-height: 140%
+    font-size: 22px
   }
 }
 @media (max-width:767px) {
@@ -903,8 +899,7 @@ textarea {
 }
 @media (max-width:991px) {
   .h3 {
-    font-size: 22px;
-    line-height: 140%
+    font-size: 22px
   }
 }
 .h3_xs {
@@ -925,8 +920,7 @@ textarea {
 }
 @media (max-width:1300px) {
   .h3_xs {
-    font-size: 22px;
-    line-height: 140%
+    font-size: 22px
   }
   .h3_xs:not(:last-child) {
     margin-bottom: 18px
@@ -952,8 +946,7 @@ textarea {
 }
 @media (max-width:1600px) {
   .h4 {
-    font-size: 24px;
-    line-height: 140%
+    font-size: 24px
   }
 }
 @media (max-width:1300px) {
@@ -997,8 +990,7 @@ textarea {
 }
 @media (max-width:991px) {
   .h4_xs {
-    font-size: 16px;
-    line-height: 160%
+    font-size: 16px
   }
 }
 .h5 {
@@ -1024,8 +1016,7 @@ textarea {
 }
 @media (max-width:991px) {
   .h5 {
-    font-size: 16px;
-    line-height: 160%
+    font-size: 16px
   }
 }
 .h6 {
@@ -4491,6 +4482,11 @@ a {
   }
 }
 @media (max-width:991px) {
+  .perv_ekr_v_5 {
+    padding: 40px 0
+  }
+}
+@media (max-width:767px) {
   .perv_ekr_v_5 {
     padding: 45px 0 0
   }
