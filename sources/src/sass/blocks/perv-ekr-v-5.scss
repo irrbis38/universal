@@ -12,6 +12,10 @@
     }
 
     @include sm {
+        padding: 40px 0;
+    }
+
+    @include xs {
         padding: 45px 0 0;
     }
 
