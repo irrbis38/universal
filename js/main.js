@@ -417,6 +417,18 @@ var initVKVideo = (videos) => {
     });
 };
 
+var initFreeWidthSlider = (slider) => {
+    console.log(slider);
+    new Swiper(slider, {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        navigation: {
+            nextEl: ".sertifikaty_v_1__next",
+            prevEl: ".sertifikaty_v_1__prev",
+        },
+    });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     // init header
     var header = document.querySelector(".header_v_1_art6");
@@ -450,4 +462,13 @@ document.addEventListener("DOMContentLoaded", () => {
     var videos = Array.from(document.querySelectorAll(".video-block"));
 
     videos.length > 0 && initVKVideo(videos);
+
+    // init free width slider
+
+    var free_width_sliders = Array.from(
+        document.querySelectorAll(".js-free-width-slider")
+    );
+
+    free_width_sliders.length > 0 &&
+        free_width_sliders.forEach((slider) => initFreeWidthSlider(slider));
 });
