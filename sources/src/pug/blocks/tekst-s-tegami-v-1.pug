@@ -1,0 +1,29 @@
+-
+    const tekst_s_tegami_v_1_data = [
+        'Производственные помещения',
+        'Склады',
+        'Ангары',
+        'Птичники',
+        'Свинарники',
+        'Овоще-фруктохранилища',
+        'Холодильные камеры',
+    ]
+
+.tekst_s_tegami_v_1
+
+    .container
+
+        .tekst_s_tegami_v_1__container
+
+            h1.h1.tekst_s_tegami_v_1__title Комплексные решения для вашего бизнеса
+
+            p.p.tekst_s_tegami_v_1__subtitle Компания «ТТ ГРУПП» специализируется на производстве и поставке сэндвич панелей для строительства различных объектов для вашего бизнеса.  А также возьмем на себя #[strong все сопутствующие работы по доставке и монтажу.]
+
+            .mt_small.tekst_s_tegami_v_1__wrapper
+
+                each item in tekst_s_tegami_v_1_data
+
+                    a.link.tekst_s_tegami_v_1__tag(href="#")= item
+
+
+            button.button.btn_bordered_arrow.tekst_s_tegami_v_1__button(type="button") узнать подробнее

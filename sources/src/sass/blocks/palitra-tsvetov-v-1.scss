@@ -1,0 +1,177 @@
+.palitra_tsvetov_v_1__container {
+    position: relative;
+}
+
+.palitra_tsvetov_v_1__title {
+    width: 70%;
+    text-wrap: balance;
+
+    @include sm {
+        width: 60%;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.palitra_tsvetov_v_1__subtitle {
+    width: 63.5%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--color-chernyy);
+    text-wrap: balance;
+
+    @include xl {
+        font-size: 22px;
+    }
+
+    @include lg {
+        font-size: 17px;
+    }
+
+    @include sm {
+        font-size: 16px;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.palitra_tsvetov_v_1__wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 60px 32px;
+    width: 100%;
+
+    @include xl {
+        gap: 51px 28px;
+    }
+
+    @include lg {
+        gap: 41px 22px;
+    }
+
+    @include sm {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include xs {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px 21px;
+    }
+
+    @include xxs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.palitra_tsvetov_v_1__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+
+    @include xl {
+        gap: 18px 0;
+    }
+
+    @include lg {
+        gap: 14px 0;
+    }
+}
+
+.palitra_tsvetov_v_1__img {
+    border-radius: 3px;
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    @include lg {
+        border-radius: 2px;
+    }
+}
+
+.palitra_tsvetov_v_1__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #1d1d1f;
+
+    @include xl {
+        font-size: 16px;
+    }
+
+    @include lg {
+        font-size: 14px;
+    }
+}
+
+.palitra_tsvetov_v_1__button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    gap: 0 7px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
+    transition: color $transition, background-color $transition;
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--color-belyy, #fcfcfc);
+            background-color: var(--color-siniy, #355ddb);
+
+            &::before {
+                transform: rotate(-45deg);
+                opacity: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                opacity: 1;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: opacity $transition, transform $transition;
+    }
+
+    &::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23355DDB' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23355DDB' /%3E%3C/svg%3E");
+    }
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23fff' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23fff' /%3E%3C/svg%3E");
+        opacity: 0;
+    }
+
+    @include xs {
+        position: relative;
+        top: unset;
+        right: unset;
+        margin: 40px auto 0;
+    }
+}

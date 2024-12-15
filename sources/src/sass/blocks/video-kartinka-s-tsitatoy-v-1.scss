@@ -1,0 +1,171 @@
+.video_kartinka_s_tsitatoy_v_1 {
+}
+
+.video_kartinka_s_tsitatoy_v_1__wrapper {
+    display: grid;
+    grid-template-columns: 49.33% 46.67%;
+    gap: 0 4%;
+
+    @include xl {
+        grid-template-columns: 48.59% 47.51%;
+        gap: 0 3.9%;
+    }
+
+    @include lg {
+        grid-template-columns: 51.17% 45.53%;
+        gap: 0 3.3%;
+    }
+
+    @include sm {
+        grid-template-columns: 45.57% 51.23%;
+    }
+
+    @include xs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+}
+
+.video_kartinka_s_tsitatoy_v_1__media {
+    position: relative;
+
+    picture,
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 740 / 461;
+    }
+
+    iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-play-btn {
+        width: 70px;
+        height: 70px;
+    }
+
+    @include xl {
+        .video-play-btn {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @include lg {
+        .video-play-btn {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+.video_kartinka_s_tsitatoy_v_1__descr {
+    position: relative;
+    z-index: 1;
+    max-width: 694px;
+    padding: 58px 33px 32px;
+
+    @include xl {
+        padding: 50px 29px 26px;
+    }
+
+    @include lg {
+        padding: 40px 23px 18px;
+    }
+
+    @include sm {
+        padding: 18px 0 0 23px;
+    }
+}
+
+.video_kartinka_s_tsitatoy_v_1__quotes {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    z-index: -1;
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+
+    @include xl {
+        top: 27px;
+        width: 24px;
+        height: 23px;
+    }
+
+    @include lg {
+        top: 22px;
+        width: 20px;
+        height: 19px;
+    }
+
+    @include sm {
+        top: 0;
+        width: 15px;
+        height: 14px;
+    }
+}
+
+.video_kartinka_s_tsitatoy_v_1__cite {
+    margin-bottom: 60px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 150%;
+    color: $color_black_main;
+
+    @include xl {
+        margin-bottom: 52px;
+        font-size: 23px;
+    }
+
+    @include lg {
+        margin-bottom: 40px;
+        font-size: 19px;
+    }
+
+    @include sm {
+        margin-bottom: 28px;
+        font-size: 16px;
+    }
+
+    @include xs {
+        margin-bottom: 30px;
+    }
+}
+
+.video_kartinka_s_tsitatoy_v_1__name {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: $color_black_main;
+
+    @include xl {
+        margin-bottom: 11px;
+        font-size: 20px;
+    }
+
+    @include lg {
+        margin-bottom: 9px;
+        font-size: 16px;
+    }
+
+    @include sm {
+        margin-bottom: 6px;
+    }
+}
+
+.video_kartinka_s_tsitatoy_v_1__role {
+    color: $color_black_main;
+
+    @include xl {
+        font-size: 14px;
+    }
+}

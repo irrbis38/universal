@@ -1,0 +1,59 @@
+-
+    const sertifikaty_v_1_data = [
+        {
+            img: './images/sertifikaty/sert-1.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-1.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+    ]
+
+.sertifikaty_v_1
+
+    .container
+
+        .sertifikaty_v_1__container
+
+            h1.h1.sertifikaty_v_1__title Сертификаты компании
+
+            p.p.sertifikaty_v_1__subtitle Мы включены в реестр федеральной системы сертификации поставщиков
+
+            .sertifikaty_v_1__slider_block
+
+                .sertifikaty_v_1__slider.swiper.js-free-width-slider
+
+
+                    .sertifikaty_v_1__wrapper.swiper-wrapper
+
+                        each item in sertifikaty_v_1_data
+
+                            img.sertifikaty_v_1__item.swiper-slide(src= item.img alt="" decoding="async")
+
+
+                .sertifikaty_v_1__nav 
+
+                    button.sertifikaty_v_1__prev(type="button" aria-label="Показать предыдущий слайд")
+
+                    button.sertifikaty_v_1__next(type="button" aria-label="Показать следующий слайд")
+
+
+
+            button.button.btn_bordered_arrow.sertifikaty_v_1__button(type="button") узнать подробнее

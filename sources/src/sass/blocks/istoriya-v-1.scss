@@ -1,0 +1,232 @@
+.istoriya_v_1 {
+    padding: 124px 0 99px;
+    background-color: #f4fafc;
+
+    @include xl {
+        padding: 103px 0 81px;
+    }
+
+    @include lg {
+        padding: 86px 0 67px;
+    }
+
+    @include sm {
+        padding: 57px 0;
+    }
+
+    @include xs {
+        padding: 40px 0;
+    }
+}
+
+.h1.istoriya_v_1__title {
+    margin-bottom: 80px;
+    font-weight: 700;
+
+    @include xl {
+        margin-bottom: 65px;
+    }
+
+    @include lg {
+        margin-bottom: 54px;
+    }
+
+    @include sm {
+        margin-bottom: 49px;
+    }
+
+    @include xs {
+        margin-bottom: 45px;
+    }
+}
+
+.istoriya_v_1__item {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+
+    @include xl {
+        grid-template-columns: 206px 1fr;
+    }
+
+    @include lg {
+        grid-template-columns: 177px 1fr;
+    }
+
+    @include sm {
+        grid-template-columns: 153px 1fr;
+    }
+
+    @include xs {
+        position: relative;
+        display: block;
+        padding-left: 49px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            background-color: #1eb6e8;
+            transform: translate(-50%, 0) rotate(45deg);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            display: inline-block;
+            width: 2px;
+            height: 100%;
+            background-color: #1eb6e8;
+        }
+
+        &:last-child::before {
+            background-color: transparent;
+        }
+    }
+}
+
+.istoriya_v_1__period {
+    position: relative;
+    display: block;
+    padding-right: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    color: #000;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 9px;
+        right: -1px;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-radius: 3px;
+        background-color: #1eb6e8;
+        transform: translate(50%, 0) rotate(45deg);
+    }
+
+    .istoriya_v_1__item:not(:last-child) & {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            right: -2px;
+            display: inline-block;
+            width: 2px;
+            height: 100%;
+            background-color: #1eb6e8;
+        }
+    }
+
+    @include xl {
+        font-size: 32px;
+
+        &::after {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    @include lg {
+        font-size: 26px;
+
+        &::after {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    @include sm {
+        font-size: 22px;
+    }
+
+    @include xs {
+        margin-bottom: 22px;
+        padding-right: 0;
+
+        .istoriya_v_1__item:not(:last-child) &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.istoriya_v_1__descr {
+    max-width: 830px;
+    padding-left: 70px;
+
+    @include xl {
+        max-width: 760px;
+        padding-left: 60px;
+    }
+
+    @include lg {
+        max-width: 660px;
+        padding-left: 50px;
+    }
+
+    @include sm {
+        padding-left: 35px;
+    }
+
+    @include xs {
+        padding-left: 0;
+    }
+}
+
+.istoriya_v_1__name {
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    color: #000;
+
+    @include xl {
+        margin-bottom: 16px;
+        font-size: 24px;
+    }
+
+    @include lg {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    @include xs {
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+}
+
+.istoriya_v_1__text {
+    padding-bottom: 75px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000;
+
+    .istoriya_v_1__item:last-child & {
+        padding-bottom: 0;
+    }
+
+    @include xl {
+        padding-bottom: 57px;
+        font-size: 16px;
+    }
+
+    @include lg {
+        padding-bottom: 45px;
+        font-size: 14px;
+    }
+
+    @include xs {
+        padding-bottom: 24px;
+    }
+}

@@ -1,0 +1,178 @@
+.tekst_s_tegami_v_1__container {
+    position: relative;
+}
+
+.tekst_s_tegami_v_1__title {
+    width: 70%;
+
+    @include sm {
+        width: 60%;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.tekst_s_tegami_v_1__subtitle {
+    width: 63.5%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--color-chernyy);
+
+    @include xl {
+        font-size: 22px;
+    }
+
+    @include lg {
+        font-size: 17px;
+    }
+
+    @include sm {
+        font-size: 16px;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.tekst_s_tegami_v_1__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    max-width: 1110px;
+
+    @include xl {
+        gap: 18px;
+        max-width: 1010px;
+    }
+
+    @include lg {
+        gap: 15px;
+        max-width: 830px;
+    }
+
+    @include sm {
+        gap: 13px;
+        max-width: 735px;
+    }
+
+    @include xs {
+        gap: 15px;
+        max-width: 480px;
+    }
+
+    @include xxs {
+        max-width: 320px;
+    }
+}
+
+.tekst_s_tegami_v_1__tag {
+    display: inline-flex;
+    height: 64px;
+    padding: 15px 40px;
+    border: 1.5px solid #747474;
+    border-radius: 80px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    color: $color_black_main;
+    white-space: nowrap;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out,
+        border-color 0.2s ease-out;
+
+    @media (hover: hover) {
+        &:hover {
+            color: $color_white;
+            background-color: #09893e;
+            border-color: #09893e;
+        }
+    }
+
+    @include xl {
+        height: 58px;
+        padding: 13px 36px;
+        font-size: 22px;
+    }
+
+    @include lg {
+        height: 48px;
+        padding: 11px 30px;
+        border-radius: 60px;
+        font-size: 17px;
+    }
+
+    @include sm {
+        height: 42px;
+        padding: 10px 26px;
+        border-radius: 54px;
+        font-size: 16px;
+    }
+
+    @include xs {
+        padding: 10px 24px;
+    }
+}
+
+.tekst_s_tegami_v_1__button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    gap: 0 7px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
+    transition: color $transition, background-color $transition;
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--color-belyy, #fcfcfc);
+            background-color: var(--color-siniy, #355ddb);
+
+            &::before {
+                transform: rotate(-45deg);
+                opacity: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                opacity: 1;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: opacity $transition, transform $transition;
+    }
+
+    &::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23355DDB' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23355DDB' /%3E%3C/svg%3E");
+    }
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23fff' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23fff' /%3E%3C/svg%3E");
+        opacity: 0;
+    }
+
+    @include xs {
+        position: relative;
+        top: unset;
+        right: unset;
+        margin: 40px auto 0;
+    }
+}

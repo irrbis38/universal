@@ -1,0 +1,49 @@
+-
+    const palitra_tsvetov_v_1_data = [
+        'RAL-1014',
+        'RAL-1015',
+        'RAL-1018',
+        'RAL-3005',
+        'RAL-3009',
+        'RAL-5005',
+        'RAL-6002',
+        'RAL-6005',
+        'RAL-7004',
+        'RAL-8017',
+        'RAL-9002',
+        'RAL-9003',
+        'RAL-9006',
+        'RAL-9010',
+        'RAL-3003',
+        'RAL-3011',
+        'RAL-5015',
+        'RAL-5024',
+        'RAL-6003',
+        'RAL-7005',
+        'RAL-7024',
+        'RAL-7036',
+        'RAL-7047',
+    ]
+
+.palitra_tsvetov_v_1
+
+    .container
+
+        .palitra_tsvetov_v_1__container
+
+            h1.h1.palitra_tsvetov_v_1__title Цвета покрытий сэндвич-панелей
+
+            p.p.palitra_tsvetov_v_1__subtitle Производим сэндвич-панели из минеральной ваты из минеральной #[strong для любых задач]
+
+            .mt_small.palitra_tsvetov_v_1__wrapper
+
+                each item in palitra_tsvetov_v_1_data
+
+                    .palitra_tsvetov_v_1__item 
+
+                        .palitra_tsvetov_v_1__img
+                            img(src="./images/palitra_tsvetov_v_1/" + item + ".webp" alt="" width="159" height="159" decoding="async")
+
+                        span.palitra_tsvetov_v_1__name= item
+
+            button.button.btn_bordered_arrow.palitra_tsvetov_v_1__button(type="button") Подробнее

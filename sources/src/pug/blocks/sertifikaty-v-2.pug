@@ -1,0 +1,49 @@
+-
+    const sertifikaty_v_2_data = [
+        {
+            img: './images/sertifikaty/sert-1.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-1.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+        {
+            img: './images/sertifikaty/sert-2.webp',
+        },
+    ]
+
+.sertifikaty_v_2
+
+    .container
+
+        .sertifikaty_v_2__container
+
+            h1.h1.sertifikaty_v_2__title Сертификаты компании
+
+            p.p.sertifikaty_v_2__subtitle Мы включены в реестр федеральной системы сертификации поставщиков
+
+            .sertifikaty_v_2__wrapper
+
+                each item in sertifikaty_v_2_data
+
+                    .sertifikaty_v_2__item
+
+                        img(src= item.img alt="" decoding="async")
+
+
+
+            button.button.btn_bordered_arrow.sertifikaty_v_2__button(type="button") узнать подробнее
