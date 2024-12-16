@@ -7653,7 +7653,8 @@ a {
 }
 .lidforma_v_1__submit {
   color: #1eb6e8;
-  background-color: var(--color-white,#fff)
+  background-color: var(--color-white,#fff);
+  border-color: var(--color-white,#fff)
 }
 @media (hover:hover) {
   .lidforma_v_1__submit:hover {
@@ -7710,7 +7711,8 @@ a {
 .video_kartinka_s_tsitatoy_v_1__media iframe {
   display: block;
   width: 100%;
-  height: 100%
+  height: 100%;
+  aspect-ratio: 740/461
 }
 .video_kartinka_s_tsitatoy_v_1__media .video-play-btn {
   width: 70px;
@@ -7726,6 +7728,13 @@ a {
   .video_kartinka_s_tsitatoy_v_1__media .video-play-btn {
     width: 48px;
     height: 48px
+  }
+}
+@media (max-width:767px) {
+  .video_kartinka_s_tsitatoy_v_1__media iframe,
+  .video_kartinka_s_tsitatoy_v_1__media img,
+  .video_kartinka_s_tsitatoy_v_1__media picture {
+    aspect-ratio: 360/225
   }
 }
 .video_kartinka_s_tsitatoy_v_1__descr {
@@ -7867,8 +7876,7 @@ a {
   }
 }
 .h1.istoriya_v_1__title {
-  margin-bottom: 80px;
-  font-weight: 700
+  margin-bottom: 80px
 }
 @media (max-width:1600px) {
   .h1.istoriya_v_1__title {
@@ -7946,7 +7954,7 @@ a {
   position: relative;
   display: block;
   padding-right: 20px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 40px;
   line-height: 110%;
   color: #000
@@ -8035,7 +8043,7 @@ a {
 }
 .istoriya_v_1__name {
   margin-bottom: 18px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
   line-height: 130%;
   color: #000
@@ -8382,15 +8390,11 @@ a {
 }
 .palitra_tsvetov_v_1__img {
   border-radius: 3px;
-  overflow: hidden
+  overflow: hidden;
+  aspect-ratio: 1/1
 }
-.palitra_tsvetov_v_1__img img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  -o-object-fit: cover;
-  object-fit: cover
+.palitra_tsvetov_v_1__img.bordered {
+  border: 1px solid #6c6c6c
 }
 @media (max-width:1300px) {
   .palitra_tsvetov_v_1__img {
