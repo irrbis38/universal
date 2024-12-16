@@ -21,7 +21,6 @@
 
 .h1.istoriya_v_1__title {
     margin-bottom: 80px;
-    font-weight: 700;
 
     @include xl {
         margin-bottom: 65px;
@@ -95,7 +94,7 @@
     position: relative;
     display: block;
     padding-right: 20px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 40px;
     line-height: 110%;
     color: #000;
@@ -184,7 +183,7 @@
 
 .istoriya_v_1__name {
     margin-bottom: 18px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 30px;
     line-height: 130%;
     color: #000;

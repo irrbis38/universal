@@ -1,28 +1,99 @@
 -
     const palitra_tsvetov_v_1_data = [
-        'RAL-1014',
-        'RAL-1015',
-        'RAL-1018',
-        'RAL-3005',
-        'RAL-3009',
-        'RAL-5005',
-        'RAL-6002',
-        'RAL-6005',
-        'RAL-7004',
-        'RAL-8017',
-        'RAL-9002',
-        'RAL-9003',
-        'RAL-9006',
-        'RAL-9010',
-        'RAL-3003',
-        'RAL-3011',
-        'RAL-5015',
-        'RAL-5024',
-        'RAL-6003',
-        'RAL-7005',
-        'RAL-7024',
-        'RAL-7036',
-        'RAL-7047',
+        {
+            color: '#D3C378',
+            name: 'RAL-1014',
+        },
+        {
+            color: '#F5E1AA',
+            name: 'RAL-1015',
+        },
+        {
+            color: '#FBE22B',
+            name: 'RAL-1018',
+        },
+        {
+            color: '#611200',
+            name: 'RAL-3005',
+        },
+        {
+            color: '#641706',
+            name: 'RAL-3009',
+        },
+        {
+            color: '#2D2D6D',
+            name: 'RAL-5005',
+        },
+        {
+            color: '#1D5F28',
+            name: 'RAL-6002',
+        },
+        {
+            color: '#00281C',
+            name: 'RAL-6005',
+        },
+        {
+            color: '#999999',
+            name: 'RAL-7004',
+        },
+        {
+            color: '#330F04',
+            name: 'RAL-8017',
+        },
+        {
+            color: '#D6D8C7',
+            name: 'RAL-9002',
+        },
+        {
+            color: '#FFFFFF',
+            name: 'RAL-9003',
+            isBordered: true,
+        },
+        {
+            color: '#B5B3B4',
+            name: 'RAL-9006',
+        },
+        {
+            color: '#FFFFF6',
+            name: 'RAL-9010',
+            isBordered: true,
+        },
+        {
+            color: '#8E0700',
+            name: 'RAL-3003',
+        },
+        {
+            color: '#993333',
+            name: 'RAL-3011',
+        },
+        {
+            color: '#2851AE',
+            name: 'RAL-5015',
+        },
+        {
+            color: '#5E718E',
+            name: 'RAL-5024',
+        },
+        {
+            color: '#2D3520',
+            name: 'RAL-6003',
+        },
+        {
+            color: '#97957F',
+            name: 'RAL-7005',
+        },
+        {
+            color: '#2C292B',
+            name: 'RAL-7024',
+        },
+        {
+            color: '#B3BBB6',
+            name: 'RAL-7036',
+        },
+        {
+            color: '#C9CAC9',
+            name: 'RAL-7047',
+        },
     ]
 
 .palitra_tsvetov_v_1
@@ -41,9 +112,8 @@
 
                     .palitra_tsvetov_v_1__item 
 
-                        .palitra_tsvetov_v_1__img
-                            img(src="./images/palitra_tsvetov_v_1/" + item + ".webp" alt="" width="159" height="159" decoding="async")
+                        .palitra_tsvetov_v_1__img(style="background-color:" + item.color + ";" class=(item.isBordered && "bordered"))
 
-                        span.palitra_tsvetov_v_1__name= item
+                        span.palitra_tsvetov_v_1__name= item.name
 
             button.button.btn_bordered_arrow.palitra_tsvetov_v_1__button(type="button") Подробнее

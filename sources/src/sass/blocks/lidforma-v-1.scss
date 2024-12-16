@@ -249,6 +249,7 @@
 .lidforma_v_1__submit {
     color: #1eb6e8;
     background-color: $color_white;
+    border-color: $color_white;
 
     @media (hover: hover) {
         &:hover {

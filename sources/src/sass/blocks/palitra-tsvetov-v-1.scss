@@ -85,13 +85,18 @@
 .palitra_tsvetov_v_1__img {
     border-radius: 3px;
     overflow: hidden;
+    aspect-ratio: 1/1;
 
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
-        object-fit: cover;
+    // img {
+    //     display: block;
+    //     width: 100%;
+    //     height: auto;
+    //     aspect-ratio: 1/1;
+    //     object-fit: cover;
+    // }
+
+    &.bordered {
+        border: 1px solid #6c6c6c;
     }
 
     @include lg {
