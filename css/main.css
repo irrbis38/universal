@@ -3406,8 +3406,7 @@ a {
   padding: 11px 24px;
   background-color: #1eb6e8;
   border-color: #1eb6e8;
-  border-width: 2px;
-  color: var(--color-chernyy,#0e0e0e)
+  border-width: 2px
 }
 .perv_ekr_v_2__form_submit::-webkit-input-placeholder {
   font-family: inherit;
