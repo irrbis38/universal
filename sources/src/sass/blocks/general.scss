@@ -731,3 +731,6 @@ a {
     //     }
     // }
 }
+input.error {
+    border-color: var(--color-error);
+}
