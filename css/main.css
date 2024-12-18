@@ -1500,6 +1500,9 @@ a {
     opacity: 1
   }
 }
+input.error {
+  border-color: var(--color-error)
+}
 .header_v_1_art6 {
   position: fixed;
   top: 0;
@@ -3409,25 +3412,17 @@ a {
   border-width: 2px
 }
 .perv_ekr_v_2__form_submit::-webkit-input-placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px
+  font-family: inherit
 }
 .perv_ekr_v_2__form_submit::-moz-placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px
+  font-family: inherit
 }
 .perv_ekr_v_2__form_submit:-ms-input-placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px
+  font-family: inherit
 }
 .perv_ekr_v_2__form_submit,
 .perv_ekr_v_2__form_submit::placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 18px
+  font-family: inherit
 }
 .perv_ekr_v_2__form_submit::-webkit-input-placeholder {
   color: var(--color-seryy-tekst,#7d7d7d)
@@ -3440,6 +3435,12 @@ a {
 }
 .perv_ekr_v_2__form_submit::placeholder {
   color: var(--color-seryy-tekst,#7d7d7d)
+}
+@media (hover:hover) {
+  .perv_ekr_v_2__form_submit:hover {
+    color: #1eb6e8;
+    background-color: var(--color-white,#fff)
+  }
 }
 @media (max-width:1600px) {
   .perv_ekr_v_2__form_submit {
