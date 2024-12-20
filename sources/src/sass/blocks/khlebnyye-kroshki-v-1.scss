@@ -1,0 +1,84 @@
+.khlebnyye_kroshki_v_1__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 20px;
+
+    @include xs {
+        display: none;
+    }
+}
+
+.khlebnyye_kroshki_v_1__item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-decoration: none;
+
+    &:not(:last-child) {
+        display: flex;
+        align-items: center;
+        color: var(--color-seryy-tekst);
+        transition: color 0.2s ease-out;
+
+        @media (hover: hover) {
+            &:hover {
+                color: #0e0e0e;
+
+                &:after {
+                    color: var(--color-seryy-tekst);
+                }
+            }
+        }
+
+        &::after {
+            content: "—";
+            padding: 0 16px;
+            pointer-events: none;
+        }
+    }
+
+    &:last-child {
+        color: #0e0e0e;
+    }
+
+    @include lg {
+        font-size: 13px;
+
+        &:not(:last-child) {
+            &::after {
+                padding: 0 14px;
+            }
+        }
+    }
+}
+
+.khlebnyye_kroshki_v_1__prev {
+    display: none;
+
+    @include xs {
+        position: relative;
+        display: block;
+        padding-left: 15px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 130%;
+        color: var(--color-seryy-tekst);
+        text-decoration: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 0;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.41605 7.39645C4.61131 7.59171 4.61131 7.90829 4.41605 8.10355C4.22079 8.29882 3.90421 8.29882 3.70895 8.10355L1.08395 5.47855C0.888684 5.28329 0.888685 4.96671 1.08395 4.77145L3.70895 2.14645C3.90421 1.95118 4.22079 1.95118 4.41605 2.14645C4.61132 2.34171 4.61132 2.65829 4.41605 2.85355L2.64461 4.625H7.5625C7.83864 4.625 8.0625 4.84886 8.0625 5.125C8.0625 5.40114 7.83864 5.625 7.5625 5.625H2.64461L4.41605 7.39645Z' fill='%238E8E93'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.paginatsiya_v_1__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include xs {
+        gap: 0 7px;
+    }
+}
+
+.paginatsiya_v_1__link,
+.paginatsiya_v_1__dots {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #1a1a1a;
+
+    @include xl {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    @include lg {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+}
+
+.paginatsiya_v_1__link {
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
+    @media (hover: hover) {
+        &:hover {
+            color: #fff;
+            background-color: #1eb6e8;
+            border-radius: 3px;
+        }
+    }
+}
+
+.paginatsiya_v_1__link.paginatsiya_v_1__link_current {
+    pointer-events: none;
+
+    @media (hover: hover) {
+        &:hover {
+            color: #1eb6e8;
+            background-color: transparent;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 2px solid #d8d8d8;
+        border-radius: 3px;
+        width: 28px;
+        height: 28px;
+        transform: translate(-50%, -50%);
+
+        @include xl {
+            width: 26px;
+            height: 26px;
+        }
+
+        @include lg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+}

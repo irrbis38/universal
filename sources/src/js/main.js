@@ -429,6 +429,28 @@ var initFreeWidthSlider = (slider) => {
     });
 };
 
+var initTovaryModals = (modal) => {
+    var cls_buttons = modal.querySelectorAll(".js-tovary-close");
+
+    var open_buttons = document.querySelectorAll(".js-tovary-open");
+
+    if (cls_buttons.length < 1 || open_buttons.length < 1) return;
+
+    open_buttons.forEach((b) =>
+        b.addEventListener("click", () => {
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        })
+    );
+
+    cls_buttons.forEach((b) =>
+        b.addEventListener("click", () => {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        })
+    );
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     // init header
     var header = document.querySelector(".header_v_1_art6");
@@ -471,4 +493,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     free_width_sliders.length > 0 &&
         free_width_sliders.forEach((slider) => initFreeWidthSlider(slider));
+
+    // init tovary modals
+
+    var tovary_modal = document.querySelector(".js-tovary-modal");
+
+    tovary_modal && initTovaryModals(tovary_modal);
 });

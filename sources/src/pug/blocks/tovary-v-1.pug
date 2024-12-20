@@ -1,0 +1,82 @@
+-
+    const tovary_v_1_data = [
+        {
+            img: './images/tovary/tovary-1.webp', name: 'Кровельные сэндвич-панели PIR'
+        },
+        {
+            img: './images/tovary/tovary-2.webp', name: 'Кровельные сэндвич-панели PIR'
+        },
+        {
+            img: './images/tovary/tovary-3.webp', name: 'Кровельные сэндвич-панели PIR'
+        },
+        {
+            img: './images/tovary/tovary-1.webp', name: 'Кровельные сэндвич-панели PIR с удвоенными тьепловыми напелями'
+        },
+        {
+            img: './images/tovary/tovary-1.webp', name: 'Кровельные сэндвич-панели PIR'
+        },
+        {
+            img: './images/tovary/tovary-2.webp', name: 'Кровельные сэндвич-панели PIR'
+        },
+        {
+            img: './images/tovary/tovary-3.webp', name: 'Кровельные сэндвич-панели PIR'
+        },
+        {
+            img: './images/tovary/tovary-1.webp', name: 'Кровельные сэндвич-панели PIR'
+        },
+    ]
+
+.tovary_v_1
+
+    .container
+
+        .tovary_v_1__container
+
+            h1.h1.tovary_v_1__title В наличии на складе 
+
+            p.p.tovary_v_1__subtitle Наши менеджеры #[strong с удовольствием проконсультируют] и помогут заказать нужные материалы
+
+            .mt_small.tovary_v_1__wrapper
+
+                each item in tovary_v_1_data
+
+                    .tovary_v_1__item 
+
+                        .tovary_v_1__item_top
+
+                            img(src= item.img, alt="" decoding="async")
+
+                        span.tovary_v_1__name= item.name
+
+                        button.btn_blue.btn_large.tovary_v_1__btn.js-tovary-open Уточнить наличие
+
+
+
+
+            button.button.btn_bordered_arrow.tovary_v_1__button(type="button") Все услуги
+
+
+    .tovary_v_1__modal.js-tovary-modal
+
+        .tovary_v_1__modal_overlay.js-tovary-close
+
+
+        form.tovary_v_1__form.js-form(action="#" novalidate)
+
+            button.tovary_v_1__modal__close.js-tovary-close(type="button" aria-label="Закрыть модальное окно")
+
+            .tovary_v_1__form_content
+
+                p.p.tovary_v_1__form_name Оставьте заявку на подбор материалов
+
+                p.p.tovary_v_1__form_descr Мы детально проконсультируем и подберем наилучшее предложение
+
+                .tovary_v_1__form_fieldset
+
+                    input.input.tovary_v_1__form_input(type="text" placeholder="Ваше имя")
+
+                    input.input.tovary_v_1__form_input.js-input(type="text" placeholder="Номер телефона*" required)
+
+                    button.button.btn_blue.btn_large.tovary_v_1__form_submit.js-submit(type="submit") Получить предложение
+
+                .tovary_v_1__form_policy Заполняя эту форму, вы соглашаетесь с #[a(href="#") политикой конфиденциальности]
