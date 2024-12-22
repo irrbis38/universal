@@ -451,6 +451,15 @@ var initTovaryModals = (modal) => {
     );
 };
 
+var initPodvalMore = (moreEl) => {
+    var moreBtn = moreEl.querySelector(".js-podval-more");
+
+    moreBtn &&
+        moreBtn.addEventListener("click", () => {
+            moreEl.classList.toggle("active");
+        });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     // init header
     var header = document.querySelector(".header_v_1_art6");
@@ -499,4 +508,13 @@ document.addEventListener("DOMContentLoaded", () => {
     var tovary_modal = document.querySelector(".js-tovary-modal");
 
     tovary_modal && initTovaryModals(tovary_modal);
+
+    // init podval more
+
+    var podvals_more = document.querySelectorAll(".js-podval-extra");
+
+    podvals_more.length > 0 &&
+        podvals_more.forEach((moreEl) => {
+            initPodvalMore(moreEl);
+        });
 });
