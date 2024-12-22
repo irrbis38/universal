@@ -1,0 +1,208 @@
+.preimuschestva_v_2__container {
+    position: relative;
+}
+
+.preimuschestva_v_2__title {
+    width: 70%;
+    text-wrap: balance;
+
+    @include sm {
+        width: 60%;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.preimuschestva_v_2__subtitle {
+    width: 63.5%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--color-chernyy);
+    text-wrap: balance;
+
+    @include xl {
+        font-size: 22px;
+    }
+
+    @include lg {
+        font-size: 17px;
+    }
+
+    @include sm {
+        font-size: 16px;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.preimuschestva_v_2__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 72px;
+
+    @include xl {
+        gap: 60px 62px;
+    }
+
+    @include lg {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 56 60px;
+    }
+
+    @include sm {
+        gap: 45px 60px;
+        max-width: 800px;
+    }
+
+    @include xs {
+        display: flex;
+        flex-direction: column;
+        gap: 34px 0;
+    }
+}
+
+.preimuschestva_v_2__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 28px;
+
+    @include xl {
+        gap: 0 24px;
+    }
+
+    @include lg {
+        gap: 0 25px;
+    }
+
+    @include sm {
+        gap: 0 20px;
+    }
+
+    @include xs {
+        max-width: 500px;
+    }
+}
+
+.preimuschestva_v_2__img {
+    flex: 0 0 auto;
+    width: 118px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @include xl {
+        width: 101px;
+    }
+
+    @include lg {
+        width: 85px;
+    }
+
+    @include sm {
+        width: 65px;
+    }
+}
+
+.preimuschestva_v_2__info {
+    display: flex;
+    flex-direction: column;
+    gap: 13px 0;
+
+    @include xl {
+        gap: 12px 0;
+    }
+}
+
+.preimuschestva_v_2__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: #0e0e0e;
+
+    @include xl {
+        font-size: 20px;
+    }
+
+    @include lg {
+        font-size: 18px;
+    }
+}
+
+.preimuschestva_v_2__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #0e0e0e;
+
+    @include xl {
+        font-size: 14px;
+    }
+}
+
+.preimuschestva_v_2__button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    gap: 0 7px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
+    transition: color $transition, background-color $transition;
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--color-belyy, #fcfcfc);
+            background-color: var(--color-siniy, #355ddb);
+
+            &::before {
+                transform: rotate(-45deg);
+                opacity: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                opacity: 1;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 24px;
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: opacity $transition, transform $transition;
+    }
+
+    &::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23355DDB' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23355DDB' /%3E%3C/svg%3E");
+    }
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19727 11.0972L11.0503 7.33344L7.19727 3.56971' stroke='%23fff' stroke-width='1.33335' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.63818 6.66682C1.26999 6.66682 0.971508 6.9653 0.971508 7.3335C0.971508 7.70169 1.26999 8.00017 1.63818 8.00017L1.63818 6.66682ZM10.4452 6.66682L1.63818 6.66682L1.63818 8.00017L10.4452 8.00017L10.4452 6.66682Z' fill='%23fff' /%3E%3C/svg%3E");
+        opacity: 0;
+    }
+
+    @include xs {
+        position: relative;
+        top: unset;
+        right: unset;
+        margin: 40px auto 0;
+    }
+}

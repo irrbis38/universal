@@ -1,0 +1,55 @@
+-
+    const preimuschestva_v_1_data = [
+        {
+            name: 'Огнестойкость',
+            unit: 'класс',
+            value: '20',
+        },
+        {
+            name: 'Плотность',
+            unit: 'кг/м³',
+            value: '100',
+        },
+        {
+            name: 'Влагоустойчивость',
+            unit: '%',
+            value: '53',
+        },
+        {
+            name: 'Шумоподавление',
+            unit: 'Дб',
+            value: '27',
+        },
+    ]
+
+.preimuschestva_v_1
+
+    .container
+
+        .preimuschestva_v_1__container
+
+            h1.h1.preimuschestva_v_1__title Особенности панелей
+
+            p.p.preimuschestva_v_1__subtitle Производим сэндвич-панели из минеральной ваты из минеральной #[strong для любых задач]
+
+            .mt_small.preimuschestva_v_1__wrapper
+
+                .preimuschestva_v_1__img 
+                    img(src="./images/preimuschestva/preimuschestva-1.webp" alt="" decoding="async")
+
+
+                each item in preimuschestva_v_1_data
+
+                    .preimuschestva_v_1__item
+
+                        .preimuschestva_v_1__top
+
+                            span.preimuschestva_v_1__name= item.name
+
+                            span.preimuschestva_v_1__unit= item.unit
+
+                        span.preimuschestva_v_1__value= item.value
+
+
+
+            button.button.btn_bordered_arrow.preimuschestva_v_1__button(type="button") Подробнее

@@ -1,0 +1,43 @@
+-   
+    const preimuschestva_v_3_data = [
+        {
+            img: './images/preimuschestva/preimuschestva3-1.svg',
+            text: 'Гарантия низких цен и соблюдение дилерской политики'
+        },
+        {
+            img: './images/preimuschestva/preimuschestva3-2.svg',
+            text: 'В наличии огромный склад готовых позиций, которые можно сразу забрать в день заказа'
+        },
+        {
+            img: './images/preimuschestva/preimuschestva3-3.svg',
+            text: 'Соблюдение оговоренных сроков производства и поставки материалов'
+        },
+        {
+            img: './images/preimuschestva/preimuschestva3-4.svg',
+            text: 'Комплексное снабжение объектов строительства: проектирование, доставка, монтаж «под ключ»'
+        },
+    ]
+
+.preimuschestva_v_3
+
+    .container
+
+        .preimuschestva_v_3__container
+
+            h1.h1.preimuschestva_v_3__title ТТГрупп — компания, которой доверяют
+
+            p.p.preimuschestva_v_3__subtitle Наша компания нацелена на работу с постоянными покупателями и поставщиками. Если вы специализируетесь на продаже сэндвич-панелей, занимаетесь строительством быстровозводимых зданий или осуществляете монтаж панелей, работаете сами на себя в качестве агента — то мы точно найдем общий язык в совместной долгосрочной работе на взаимовыгодных условиях.
+
+            .mt_small.preimuschestva_v_3__wrapper
+
+                each item in preimuschestva_v_3_data 
+
+                    .preimuschestva_v_3__item 
+
+                        .preimuschestva_v_3__icon 
+
+                            img(src= item.img, alt="" decoding="async")
+
+                        span.preimuschestva_v_3__text= item.text
+
+            button.button.btn_bordered_arrow.preimuschestva_v_3__button(type="button") Подробнее

@@ -1,0 +1,55 @@
+-
+    const preimuschestva_v_2_data = [
+        {
+            img: './images/preimuschestva/preimuschestva2-1.svg',
+            name: 'Гладкий',
+            descr: 'Самый популярный вид профиля, его особенность заключается в том, что его популярность по виду '
+        },
+        {
+            img: './images/preimuschestva/preimuschestva2-2.svg',
+            name: 'Волна',
+            descr: 'Самый популярный вид профиля, его особенность заключается'
+        },
+        {
+            img: './images/preimuschestva/preimuschestva2-3.svg',
+            name: 'Трапециевидная',
+            descr: 'Самый популярный вид профиля, его особенность заключается в том, что его популярность по виду '
+        },
+        {
+            img: './images/preimuschestva/preimuschestva2-4.svg',
+            name: 'Накатка',
+            descr: 'Самый популярный вид профиля, его особенность заключается'
+        },
+        {
+            img: './images/preimuschestva/preimuschestva2-5.svg',
+            name: 'Кровельная',
+            descr: 'Самый популярный вид профиля, его особенность заключается в том, что его популярность по виду '
+        },
+    ]
+
+.preimuschestva_v_2
+
+    .container
+
+        .preimuschestva_v_2__container
+
+            h1.h1.preimuschestva_v_2__title Виды профилирования сэндвич-панелей
+
+            p.p.preimuschestva_v_2__subtitle Производим сэндвич-панели из минеральной ваты из минеральной #[strong для любых задач]
+
+            .mt_small.preimuschestva_v_2__wrapper
+
+                each item in preimuschestva_v_2_data
+
+                    .preimuschestva_v_2__item
+
+                        .preimuschestva_v_2__img
+                            img(src= item.img, alt="" decoding="async" width="118" height="118")
+
+                        .preimuschestva_v_2__info 
+
+                            span.preimuschestva_v_2__name= item.name
+
+                            span.preimuschestva_v_2__descr= item.descr
+
+            button.button.btn_bordered_arrow.preimuschestva_v_2__button(type="button") Подробнее

@@ -1,0 +1,197 @@
+.o_kompanii_v_1 {
+    padding: 124px 0;
+    background-color: #093f5a;
+
+    @include xl {
+        padding: 103px 0 105px;
+    }
+
+    @include lg {
+        padding: 88px;
+    }
+
+    @include sm {
+        padding: 57px 0;
+    }
+
+    @include xs {
+        padding: 40px 0 62px;
+    }
+}
+
+.o_kompanii_v_1__main {
+    display: grid;
+    grid-template-columns: 1fr 609px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "title img"
+        "info img";
+    gap: 0 168px;
+    margin-bottom: 75px;
+    color: #fff;
+
+    @include xl {
+        grid-template-columns: 1fr 519px;
+        gap: 0 102px;
+        margin-bottom: 64px;
+    }
+
+    @include lg {
+        grid-template-columns: 1fr 437px;
+        gap: 0 40px;
+        margin-bottom: 54px;
+    }
+
+    @include md {
+        grid-template-columns: 1fr 306px;
+        gap: 0 26px;
+        margin-bottom: 40px;
+    }
+
+    @include xs {
+        display: block;
+        margin-bottom: 34px;
+    }
+}
+
+.o_kompanii_v_1__title {
+    grid-area: title;
+    margin-bottom: 30px;
+
+    @include xl {
+        margin-bottom: 26px;
+    }
+
+    @include lg {
+        margin-bottom: 24px;
+    }
+
+    @include sm {
+        margin-bottom: 20px;
+    }
+}
+
+.o_kompanii_v_1__info {
+    grid-area: info;
+}
+
+.o_kompanii_v_1__subtitle {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 130%;
+}
+
+.o_kompanii_v_1__img {
+    grid-area: img;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @include xs {
+        margin-bottom: 20px;
+    }
+}
+
+.o_kompanii_v_1__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+
+    p:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    @include xl {
+        font-size: 16px;
+    }
+
+    @include lg {
+        font-size: 14px;
+    }
+}
+
+.o_kompanii_v_1__benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 52px;
+    max-width: 1470px;
+
+    @include xl {
+        gap: 44px;
+    }
+
+    @include lg {
+        gap: 32px;
+    }
+
+    @include md {
+        gap: 27px;
+    }
+
+    @include xs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 34px 14px;
+    }
+}
+
+.o_kompanii_v_1__item {
+    padding-left: 40px;
+    border-left: 1px solid #fff;
+
+    @include xl {
+        padding-left: 34px;
+    }
+
+    @include lg {
+        padding-left: 27px;
+    }
+
+    @include md {
+        padding-left: 14px;
+    }
+}
+
+.o_kompanii_v_1__value {
+    display: block;
+    margin-bottom: 37px;
+    font-weight: 500;
+    font-size: 60px;
+    letter-spacing: -0.02em;
+    color: #fff;
+    white-space: nowrap;
+
+    @include xl {
+        margin-bottom: 32px;
+        font-size: 50px;
+    }
+
+    @include lg {
+        margin-bottom: 18px;
+        font-size: 38px;
+    }
+
+    @include md {
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+}
+
+.o_kompanii_v_1__descr {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #fff;
+
+    @include xl {
+        font-size: 18px;
+    }
+
+    @include lg {
+        font-size: 14px;
+    }
+}
