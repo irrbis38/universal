@@ -92,6 +92,40 @@
     }
 }
 
+.tovary_v_1__item_price {
+    position: absolute;
+    top: 19px;
+    right: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: #1d1d1f;
+
+    @include xl {
+        top: 15px;
+        right: 16px;
+        padding: 7px 6px;
+        font-size: 16px;
+    }
+
+    @include lg {
+        top: 13px;
+        right: 12px;
+        font-size: 14px;
+    }
+
+    @include xs {
+        top: 10px;
+        right: 14px;
+    }
+}
+
 .tovary_v_1__name {
     display: block;
     width: 100%;
@@ -500,16 +534,22 @@
     color: $color_grey_text2;
 
     a {
-        display: inline-block;
-        width: 100%;
         text-decoration: underline;
         text-decoration-skip-ink: none;
+    }
+
+    @include xl {
+        font-size: 13px;
     }
 
     @include sm {
         a {
             display: inline;
         }
+    }
+
+    @include xs {
+        font-size: 14px;
     }
 }
 

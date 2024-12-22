@@ -173,6 +173,37 @@
         background-image: url("data:image/svg+xml,%3Csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.25 14.25L16.5 8L10.25 1.75' stroke='%23355DDB' stroke-width='1.90476' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M1.5 7.04762C0.974014 7.04762 0.547619 7.47402 0.547619 8C0.547619 8.52599 0.974015 8.95238 1.5 8.95238L1.5 7.04762ZM15.25 7.04762L1.5 7.04762L1.5 8.95238L15.25 8.95238L15.25 7.04762Z' fill='%23355DDB' /%3E%3C/svg%3E");
         opacity: 0;
     }
+
+    @include xl {
+        width: 34px;
+        height: 34px;
+        top: 28px;
+        right: 28px;
+
+        &::before,
+        &::after {
+            width: 16px;
+            height: 14px;
+        }
+    }
+
+    @include lg {
+        width: 28px;
+        height: 28px;
+        top: 26px;
+        right: 26px;
+
+        &::before,
+        &::after {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    @include sm {
+        top: 20px;
+        right: 20px;
+    }
 }
 
 .statyi_plitka_v_1__name {

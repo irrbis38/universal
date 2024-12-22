@@ -13,7 +13,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
-    text-decoration: none;
 
     &:not(:last-child) {
         display: flex;
@@ -35,11 +34,16 @@
             content: "—";
             padding: 0 16px;
             pointer-events: none;
+            cursor: default;
         }
     }
 
     &:last-child {
         color: #0e0e0e;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     @include lg {
@@ -59,7 +63,7 @@
     @include xs {
         position: relative;
         display: block;
-        padding-left: 15px;
+        padding: 20px 0 0 15px;
         font-weight: 400;
         font-size: 13px;
         line-height: 130%;
@@ -69,7 +73,7 @@
         &::before {
             content: "";
             position: absolute;
-            top: 4px;
+            top: 24px;
             left: 0;
             display: inline-block;
             width: 10px;
