@@ -79,6 +79,18 @@
     margin-bottom: 20px;
     font-size: 30px;
     line-height: 130%;
+
+    @include xl {
+        font-size: 24px;
+    }
+
+    @include lg {
+        font-size: 20px;
+    }
+
+    @include sm {
+        font-size: 18px;
+    }
 }
 
 .o_kompanii_v_1__img {
@@ -96,9 +108,12 @@
 }
 
 .o_kompanii_v_1__text {
-    font-weight: 400;
     font-size: 18px;
-    line-height: 140%;
+
+    p {
+        font-weight: 400;
+        line-height: 140%;
+    }
 
     p:not(:last-child) {
         margin-bottom: 1em;
@@ -139,7 +154,7 @@
 
 .o_kompanii_v_1__item {
     padding-left: 40px;
-    border-left: 1px solid #fff;
+    border-left: 2px solid #fff;
 
     @include xl {
         padding-left: 34px;

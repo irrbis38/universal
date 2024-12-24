@@ -21,11 +21,12 @@
 
 .podval_v_1__wrapper {
     display: grid;
-    grid-template-columns: 1fr 356px;
+    grid-template-columns: 1fr 420px;
     gap: 0 63px;
     margin-bottom: 80px;
 
     @include xl {
+        grid-template-columns: 1fr 360px;
         gap: 0 46px;
         margin-bottom: 60px;
     }
@@ -35,7 +36,7 @@
     }
 
     @include sm {
-        grid-template-columns: 1fr 278px;
+        grid-template-columns: 1fr 280px;
         gap: 0 24px;
     }
 
@@ -122,6 +123,10 @@
         font-size: 18px;
         text-transform: uppercase;
         color: #fefefe;
+
+        &:not(:first-child) {
+            margin-top: 6px;
+        }
     }
 
     @include xl {
@@ -142,6 +147,12 @@
 
     @include xs {
         font-size: 14px;
+
+        &.podval_v_1__main_link {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
     }
 }
 
@@ -350,5 +361,90 @@
 
     @include sm {
         font-size: 14px;
+    }
+}
+
+.podval_v_1__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 20px;
+
+    @include xs {
+        display: block;
+    }
+}
+
+.podval_v_1__copyright {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+
+    @include xl {
+        font-size: 15px;
+    }
+
+    @include sm {
+        font-size: 14px;
+    }
+
+    @include xs {
+        margin-bottom: 16px;
+    }
+}
+
+.podval_v_1__policy {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+
+    @include xl {
+        font-size: 15px;
+    }
+
+    @include sm {
+        font-size: 14px;
+    }
+
+    @include xs {
+        margin-bottom: 60px;
+    }
+}
+
+.podval_v_1__developed {
+    display: flex;
+    align-items: center;
+    gap: 0 9px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: right;
+    color: #fff;
+
+    img {
+        width: 87px;
+        height: 22px;
+        object-fit: contain;
+    }
+
+    @include xl {
+        font-size: 15px;
+    }
+
+    @include sm {
+        font-size: 14px;
+    }
+
+    @include xs {
+        img {
+            width: 75px;
+            height: 19px;
+        }
     }
 }

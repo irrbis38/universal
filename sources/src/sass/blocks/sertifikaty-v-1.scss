@@ -109,7 +109,7 @@
     outline: none;
     appearance: none;
     pointer-events: all;
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;
     transition: opacity 0.2s ease-out;
 
@@ -117,6 +117,16 @@
         &:hover {
             opacity: 1;
         }
+    }
+
+    @include xl {
+        width: 34px;
+        height: 34px;
+    }
+
+    @include lg {
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -126,10 +136,24 @@
         display: inline-block;
         width: 10px;
         height: 16px;
-        background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.3684 1.3158L0.999986 7.85291L8.3684 15' stroke='%234A4A51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.36839 1.3158L0.999971 7.85291L8.36838 15' stroke='%234A4A51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    @include xl {
+        &::after {
+            width: 9px;
+            height: 15px;
+        }
+    }
+
+    @include lg {
+        &::after {
+            width: 8px;
+            height: 12px;
+        }
     }
 }
 
@@ -139,10 +163,24 @@
         display: inline-block;
         width: 10px;
         height: 16px;
-        background-image: url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59158 13.0259L7.85474 7.46931L1.59159 1.39429' stroke='%234A4A51' stroke-width='1.70614' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.63158 14.6842L9 8.14709L1.63159 0.999999' stroke='%234A4A51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    @include xl {
+        &::after {
+            width: 9px;
+            height: 15px;
+        }
+    }
+
+    @include lg {
+        &::after {
+            width: 8px;
+            height: 12px;
+        }
     }
 }
 

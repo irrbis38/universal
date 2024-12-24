@@ -75,22 +75,22 @@
 
     @include xl {
         gap: 21px 0;
-        padding: 28px 22px 52px;
+        padding: 28px 19px 32px;
     }
 
     @include lg {
         gap: 17px 0;
-        padding: 23px 17px 56px;
+        padding: 23px 15px 20px;
         border-radius: 2px;
     }
 
     @include sm {
         gap: 15px 0;
-        padding: 25px 47px 49px;
+        padding: 25px 47px 30px;
     }
 }
 
-.preimuschestva_v_3__img {
+.preimuschestva_v_3__icon {
     width: 80px;
     height: 80px;
 
