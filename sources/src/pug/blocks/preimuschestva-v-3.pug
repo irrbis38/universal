@@ -2,18 +2,22 @@
     const preimuschestva_v_3_data = [
         {
             img: './images/preimuschestva/preimuschestva3-1.svg',
+            name: 'Низкая стоимость',
             text: 'Гарантия низких цен и соблюдение дилерской политики'
         },
         {
             img: './images/preimuschestva/preimuschestva3-2.svg',
+            name: 'Высокое качество',
             text: 'В наличии огромный склад готовых позиций, которые можно сразу забрать в день заказа'
         },
         {
             img: './images/preimuschestva/preimuschestva3-3.svg',
+            name: 'Широкий спектр применения',
             text: 'Соблюдение оговоренных сроков производства и поставки материалов'
         },
         {
             img: './images/preimuschestva/preimuschestva3-4.svg',
+            name: 'Высокое качество',
             text: 'Комплексное снабжение объектов строительства: проектирование, доставка, монтаж «под ключ»'
         },
     ]
@@ -37,6 +41,8 @@
                         .preimuschestva_v_3__icon 
 
                             img(src= item.img, alt="" decoding="async")
+
+                        span.preimuschestva_v_3__name= item.name
 
                         span.preimuschestva_v_3__text= item.text
 
