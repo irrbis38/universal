@@ -1,0 +1,47 @@
+.lidforma_zakrytaya_v_1
+
+    .container
+
+        .lidforma_zakrytaya_v_1__wrapper
+
+            .lidforma_zakrytaya_v_1__content
+
+                h1.h1.lidforma_zakrytaya_v_1__title Получите прайс-лист
+
+                p.p.lidforma_zakrytaya_v_1__subtitle Оставьте свои данные и наш менеджер с вами свяжется в течении 30 минут
+
+            .lidforma_zakrytaya_v_1__picture
+
+                picture
+                    source(media="(min-width: 768px)" srcset="./images/lidforma_zakrytaya/lidforma-zakrytaya-1.webp" type="image/webp")
+                    source(media="(max-width: 767px)" srcset="./images/lidforma_zakrytaya/lidforma-zakrytaya-1-mob.webp" type="image/webp")
+                    img(src="./images/lidforma_zakrytaya/lidforma-zakrytaya-1.webp" alt="" width="680" height="593" decoding="async")
+
+            button.btn_blue.btn_large.lidforma_zakrytaya_v_1__button.js-lidforma-zakrytaya-open(type="button") Получить прайс-лист
+
+
+
+    .lidforma_zakrytaya_v_1__modal.js-lidforma-zakrytaya-modal
+
+        .lidforma_zakrytaya_v_1__modal_overlay.js-lidforma-zakrytaya-close
+
+
+        form.lidforma_zakrytaya_v_1__form.js-form(action="#" novalidate)
+
+            button.lidforma_zakrytaya_v_1__modal__close.js-lidforma-zakrytaya-close(type="button" aria-label="Закрыть модальное окно")
+
+            .lidforma_zakrytaya_v_1__form_content
+
+                p.p.lidforma_zakrytaya_v_1__form_name Оставьте заявку на подбор материалов
+
+                p.p.lidforma_zakrytaya_v_1__form_descr Мы детально проконсультируем и подберем наилучшее предложение
+
+                .lidforma_zakrytaya_v_1__form_fieldset
+
+                    input.input.lidforma_zakrytaya_v_1__form_input(type="text" placeholder="Ваше имя")
+
+                    input.input.lidforma_zakrytaya_v_1__form_input.js-input(type="text" placeholder="Номер телефона*" required)
+
+                    button.button.btn_blue.btn_large.lidforma_zakrytaya_v_1__form_submit.js-submit(type="submit") Получить предложение
+
+                .lidforma_zakrytaya_v_1__form_policy Заполняя эту форму, вы соглашаетесь с #[a(href="#") политикой конфиденциальности]

@@ -1,0 +1,41 @@
+-
+    const vidy_variant_1_data = [
+        {name: 'Z-lock'},
+        {name: 'S-fix'},
+        {name: 'Кровельный соединительный элемент'},
+        {name: 'Z-lock'},
+        {name: 'S-fix'},
+        {name: 'Кровельный соединительный элемент'},
+    ]
+
+.vidy_variant_1
+
+    .container 
+
+        .vidy_variant_1__container
+
+            h1.h1.vidy_variant_1__title Виды замкового соединения
+
+            p.p.vidy_variant_1__subtitle Одно из ключевых преимуществ нашей компании — #[strong наличие готовых сэндвич-панелей 1-го и 2-го сортов] и комплектующих на складе, что позволяет минимизировать сроки заказа и доставки до одного рабочего дня. В пик сезона сумма складских запасов достигает 50 миллионов рублей.
+
+            .vidy_variant_1__wrapper
+
+                each item in vidy_variant_1_data
+
+                    .vidy_variant_1__item
+
+                        .vidy_variant_1__item_descr
+
+                            p.p.vidy_variant_1__name= item.name 
+
+                            ul.ul.vidy_variant_1__item__list
+                                li Самый популярный вид профиля, его особенность заключается в том, что его популярность по виду профиля
+                                li Самый популярный вид профиля.
+                                li Самый популярный вид профиля, его особенность заключается в том, что его популярность по виду профиля
+                                li Самый популярный вид профиля.
+
+                        img.vidy_variant_1__item_img(src="./images/vidy-variant/vidy-variant.webp" alt="" decoding="async")
+
+
+
+            button.button.btn_bordered_arrow.vidy_variant_1__button(type="button") Подробнее

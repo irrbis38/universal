@@ -1,0 +1,56 @@
+-
+    const tekst_s_foto_v_2_data = [
+        {
+            img: './images/tekst-s-foto-v-2/tekst-s-foto-1.webp',
+        },
+        {
+            img: './images/tekst-s-foto-v-2/tekst-s-foto-2.webp',
+        },
+        {
+            img: './images/tekst-s-foto-v-2/tekst-s-foto-3.webp',
+        },
+        {
+            img: './images/tekst-s-foto-v-2/tekst-s-foto-2.webp',
+        },
+        {
+            img: './images/tekst-s-foto-v-2/tekst-s-foto-1.webp',
+        },
+        {
+            img: './images/tekst-s-foto-v-2/tekst-s-foto-3.webp',
+        },
+        {
+            img: './images/tekst-s-foto-v-2/tekst-s-foto-2.webp',
+        },
+    ]
+
+.tekst_s_foto_v_2
+
+    .container
+
+        .tekst_s_foto_v_2__container
+
+            h1.h1.tekst_s_foto_v_2__title Собственный склад готовой продуции
+
+            p.p.tekst_s_foto_v_2__subtitle Одно из ключевых преимуществ нашей компании — #[strong наличие готовых сэндвич-панелей 1-го и 2-го сортов] и комплектующих на складе, что позволяет минимизировать сроки заказа и доставки до одного рабочего дня. В пик сезона сумма складских запасов достигает 50 миллионов рублей.
+
+            .tekst_s_foto_v_2__slider_block
+
+                .tekst_s_foto_v_2__slider.swiper.js-tekst-foto-slider
+
+
+                    .tekst_s_foto_v_2__wrapper.swiper-wrapper
+
+                        each item in tekst_s_foto_v_2_data
+
+                            img.tekst_s_foto_v_2__item.swiper-slide(src= item.img alt="" decoding="async")
+
+
+                .tekst_s_foto_v_2__nav 
+
+                    button.tekst_s_foto_v_2__prev(type="button" aria-label="Показать предыдущий слайд")
+
+                    button.tekst_s_foto_v_2__next(type="button" aria-label="Показать следующий слайд")
+
+
+
+            button.button.btn_bordered_arrow.tekst_s_foto_v_2__button(type="button") Подробнее

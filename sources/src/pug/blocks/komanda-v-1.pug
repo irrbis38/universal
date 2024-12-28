@@ -1,0 +1,97 @@
+-
+    const komanda_v_1_data = [
+        {
+            img: './images/komanda/person-1.webp',
+            name: 'Шевченко Тимур Тарасович',
+            role: 'Генеральный директор',
+            email: 'mail@mail.ru',
+            phone1: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-2.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер компании ООО «ТТ Групп»',
+            email: 'mail@mail.ru',
+            phone1: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-3.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер компании ООО «ТТ Групп»',
+            email: 'mail@mail.ru',
+            phone1: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-4.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер компании ООО «ТТ Групп»',
+            email: 'mail@mail.ru',
+        },
+        {
+            img: './images/komanda/person-5.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер отдела продаж',
+            email: 'mail@mail.ru',
+            phone1: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-6.webp',
+            name: 'Иванов Иван Иванович',
+            email: 'mail@mail.ru',
+            phone1: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-7.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер отдела продаж',
+            phone1: '+7 (861) 999-99-99',
+            phone2: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-8.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер отдела продаж',
+            email: 'mail@mail.ru',
+        },
+    ]
+
+.komanda_v_1
+
+    .container 
+
+        .komanda_v_1__container
+
+            h1.h1.komanda_v_1__title Команда
+
+            p.h4.komanda_v_1__subtitle Наши лучшие специалисты всегда на связи!
+
+            .komanda_v_1__wrapper
+
+                each item in komanda_v_1_data
+
+                    .komanda_v_1__item
+
+                        img.komanda_v_1__item_img(src= item.img alt="" decoding="async")
+
+                        .komanda_v_1__item_descr
+
+                            p.p.komanda_v_1__name= item.name 
+
+                            if item.role
+                                p.p.komanda_v_1__role= item.role 
+
+                            if item.email
+                                p.p.komanda_v_1__email= item.email 
+
+                            if item.phone1
+                                p.p.komanda_v_1__phone= item.phone1 
+
+                            if item.phone2
+                                p.p.komanda_v_1__phone= item.phone2
+
+
+
+
+
+
+            button.button.btn_bordered_arrow.komanda_v_1__button(type="button") Подробнее

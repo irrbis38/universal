@@ -418,7 +418,6 @@ var initVKVideo = (videos) => {
 };
 
 var initFreeWidthSlider = (slider) => {
-    console.log(slider);
     new Swiper(slider, {
         slidesPerView: "auto",
         spaceBetween: 15,
@@ -451,6 +450,28 @@ var initTovaryModals = (modal) => {
     );
 };
 
+var initLidformaZakrytayaModal = (modal) => {
+    var cls_buttons = modal.querySelectorAll(".js-lidforma-zakrytaya-close");
+
+    var open_buttons = document.querySelectorAll(".js-lidforma-zakrytaya-open");
+
+    if (cls_buttons.length < 1 || open_buttons.length < 1) return;
+
+    open_buttons.forEach((b) =>
+        b.addEventListener("click", () => {
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        })
+    );
+
+    cls_buttons.forEach((b) =>
+        b.addEventListener("click", () => {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        })
+    );
+};
+
 var initPodvalMore = (moreEl) => {
     var moreBtn = moreEl.querySelector(".js-podval-more");
 
@@ -458,6 +479,35 @@ var initPodvalMore = (moreEl) => {
         moreBtn.addEventListener("click", () => {
             moreEl.classList.toggle("active");
         });
+};
+
+var initTextSFotoSlider = (slider) => {
+    new Swiper(slider, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            prevEl: ".tekst_s_foto_v_2__prev",
+            nextEl: ".tekst_s_foto_v_2__next",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 26,
+            },
+            1301: {
+                slidesPerView: 3,
+                spaceBetween: 33,
+            },
+            1601: {
+                slidesPerView: 3,
+                spaceBetween: 38,
+            },
+        },
+    });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -509,6 +559,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tovary_modal && initTovaryModals(tovary_modal);
 
+    // init tovary modals
+
+    var lidforma_zakrytaya_modal = document.querySelector(
+        ".js-lidforma-zakrytaya-modal"
+    );
+
+    lidforma_zakrytaya_modal &&
+        initLidformaZakrytayaModal(lidforma_zakrytaya_modal);
+
     // init podval more
 
     var podvals_more = document.querySelectorAll(".js-podval-extra");
@@ -517,4 +576,13 @@ document.addEventListener("DOMContentLoaded", () => {
         podvals_more.forEach((moreEl) => {
             initPodvalMore(moreEl);
         });
+
+    // init tekst_s_foto_v_2 slider
+
+    var tekst_s_foto_slider = Array.from(
+        document.querySelectorAll(".js-tekst-foto-slider")
+    );
+
+    tekst_s_foto_slider.length > 0 &&
+        tekst_s_foto_slider.forEach((slider) => initTextSFotoSlider(slider));
 });

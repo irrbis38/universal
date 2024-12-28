@@ -1,0 +1,506 @@
+.lidforma_zakrytaya_v_1 {
+    overflow-x: hidden;
+    overflow-x: clip;
+    padding: 124px 0;
+    background-color: #093f5a;
+
+    @include xl {
+        padding: 103px 0;
+    }
+
+    @include lg {
+        padding: 87px 0;
+    }
+
+    @include sm {
+        padding: 57px 0;
+    }
+
+    @include xs {
+        padding: 40px 0;
+    }
+}
+
+.lidforma_zakrytaya_v_1__wrapper {
+    display: grid;
+    grid-template-columns: 52% 45.2%;
+    grid-template-rows: 1fr auto;
+    gap: 0 2.8%;
+    grid-template-areas:
+        "content picture"
+        "button picture";
+
+    @include xl {
+        grid-template-columns: 50.63% 44.22%;
+        gap: 0 5.15%;
+    }
+
+    @include lg {
+        grid-template-columns: 53.14% 46.38%;
+        gap: 0 0.48%;
+    }
+
+    @include sm {
+        grid-template-columns: 57.57% 42.43%;
+        gap: 0;
+    }
+    @include xs {
+        display: block;
+    }
+}
+
+.lidforma_zakrytaya_v_1__content {
+    grid-area: content;
+    margin-bottom: 60px;
+
+    @include xl {
+        margin-bottom: 49px;
+    }
+
+    @include lg {
+        margin-bottom: 43px;
+    }
+
+    @include sm {
+        margin-bottom: 31px;
+    }
+
+    @include xs {
+        margin-bottom: 20px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__title {
+    color: #fff;
+}
+
+.lidforma_zakrytaya_v_1__subtitle {
+    max-width: 590px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 130%;
+    color: #fff;
+
+    @include xl {
+        font-size: 22px;
+    }
+
+    @include lg {
+        font-size: 18px;
+    }
+
+    @include sm {
+        max-width: 360px;
+        font-size: 16px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__button {
+    grid-area: button;
+    width: max-content;
+    min-width: 362px;
+    background-color: #1eb6e8;
+    border: none;
+
+    @media (hover: hover) {
+        &:hover {
+            color: #1eb6e8;
+            background-color: #fff;
+        }
+    }
+
+    @include xl {
+        min-width: 302px;
+    }
+
+    @include lg {
+        min-width: 254px;
+    }
+
+    @include sm {
+        min-width: 238px;
+    }
+
+    @include xs {
+        width: 100%;
+    }
+}
+
+.lidforma_zakrytaya_v_1__picture {
+    grid-area: picture;
+    position: relative;
+
+    picture {
+        position: absolute;
+        top: -103px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+
+        @include xl {
+            top: -85px;
+        }
+
+        @include lg {
+            top: -72px;
+        }
+
+        @include sm {
+            top: -29px;
+        }
+
+        @include xs {
+            position: static;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+// FORM
+
+.lidforma_zakrytaya_v_1__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+.lidforma_zakrytaya_v_1__modal_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 0.15);
+    cursor: pointer;
+}
+
+.lidforma_zakrytaya_v_1__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    flex: 0 0 auto;
+    width: 448px;
+
+    @include xl {
+        width: 408px;
+    }
+
+    @include lg {
+        width: 340px;
+    }
+
+    @include sm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 340px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__modal__close {
+    position: absolute;
+    top: 22px;
+    right: 27px;
+    z-index: 3;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.737 8.861 22.88 23.004m.258-14.142L8.995 23.004' stroke='%230E0E0E' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+
+    @include xl {
+        top: 19px;
+        right: 25px;
+        width: 28px;
+        height: 28px;
+    }
+
+    @include lg {
+        top: 15px;
+        right: 23px;
+        width: 25px;
+        height: 25px;
+    }
+
+    @include xs {
+        top: 35px;
+        right: 20px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_content {
+    position: relative;
+    z-index: 1;
+    padding: 52px 42px 47px;
+    background-color: $color_white;
+    border-radius: 3px;
+
+    @include xl {
+        padding: 47px 38px 48px;
+    }
+
+    @include lg {
+        padding: 40px 32px 36px;
+    }
+
+    @include sm {
+        z-index: 2;
+        order: 2;
+        padding: 40px 36px 43px;
+    }
+
+    @include xs {
+        padding: 36px 30px 36px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_name {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: $color_black;
+
+    @include xl {
+        margin-bottom: 12px;
+        font-size: 23px;
+    }
+
+    @include lg {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    @include sm {
+        margin-bottom: 5px;
+    }
+
+    @include xs {
+        margin-bottom: 9px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_descr {
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    color: $color_black;
+
+    @include xl {
+        margin-bottom: 32px;
+        font-size: 18px;
+    }
+
+    @include lg {
+        margin-bottom: 28px;
+        font-size: 15px;
+    }
+
+    @include sm {
+        margin-bottom: 22px;
+    }
+
+    @include xs {
+        margin-bottom: 28px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_fieldset {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include xl {
+        margin-bottom: 9px;
+    }
+
+    @include lg {
+        margin-bottom: 8px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 22px;
+    padding: 5px 19px;
+    border: 2px solid $color_grey_line;
+    border-radius: 3px;
+    color: $color_black_main;
+
+    &,
+    &::placeholder {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    &::placeholder {
+        color: $color_grey_text;
+    }
+
+    @include xl {
+        height: 51px;
+        padding: 5px 15px;
+
+        &,
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+
+    @include lg {
+        height: 42px;
+        padding: 5px 12px;
+
+        &,
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+
+    @include sm {
+        height: 47px;
+        padding: 5px 15px;
+    }
+
+    @include xs {
+        height: 52px;
+        margin-bottom: 10px;
+        padding: 5px 18px;
+
+        &,
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_submit {
+    min-width: auto;
+    margin-top: 14px;
+    background-color: $color_btn_blue;
+    border-color: $color_btn_blue;
+    border-width: 2px;
+
+    @media (hover: hover) {
+        &:hover {
+            color: $color_btn_blue;
+            background-color: $color_white;
+        }
+    }
+
+    @include xl {
+        min-height: 51px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    @include lg {
+        min-height: 42px;
+        font-size: 13px;
+    }
+
+    @include sm {
+        flex: 0 0 auto;
+        min-width: 238px;
+        min-height: 47px;
+        margin-top: 0;
+    }
+
+    @include xs {
+        min-width: unset;
+        min-height: 52px;
+        margin-top: 18px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_policy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    color: $color_grey_text2;
+
+    a {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+    }
+
+    @include xl {
+        font-size: 13px;
+    }
+
+    @include sm {
+        a {
+            display: inline;
+        }
+    }
+
+    @include xs {
+        font-size: 14px;
+    }
+}
+
+.lidforma_zakrytaya_v_1__form_bg {
+    position: absolute;
+    bottom: 0;
+    right: calc(50% + 20px);
+    z-index: -1;
+    width: 121.5%;
+    aspect-ratio: 543/273;
+
+    picture,
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @include sm {
+        order: 1;
+        position: static;
+        width: 41.35%;
+        margin: 0 0 0 auto;
+        aspect-ratio: 318/160;
+        transform: translateY(24px);
+    }
+
+    @include xs {
+        width: 100%;
+        max-width: 318px;
+        margin: 0 auto;
+    }
+}
