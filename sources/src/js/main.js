@@ -510,6 +510,33 @@ var initTextSFotoSlider = (slider) => {
     });
 };
 
+var initKomandaSlider = (sliderEl) => {
+    var slider = null;
+
+    var initSlider = () => {
+        slider = new Swiper(sliderEl, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                prevEl: ".komanda_v_1__prev",
+                nextEl: ".komanda_v_1__next",
+            },
+        });
+    };
+
+    window.innerWidth < 768 && initSlider();
+
+    var disableSlider = () => {
+        slider && slider.destroy();
+    };
+
+    var mm767 = window.matchMedia("(max-width: 767px)");
+
+    mm767.addEventListener("change", () =>
+        mm767.matches ? initSlider() : disableSlider()
+    );
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     // init header
     var header = document.querySelector(".header_v_1_art6");
@@ -585,4 +612,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tekst_s_foto_slider.length > 0 &&
         tekst_s_foto_slider.forEach((slider) => initTextSFotoSlider(slider));
+
+    var komanda_sliders = Array.from(
+        document.querySelectorAll(".js-komanda-slider")
+    );
+    komanda_sliders.length > 0 &&
+        komanda_sliders.forEach((slider) => initKomandaSlider(slider));
 });

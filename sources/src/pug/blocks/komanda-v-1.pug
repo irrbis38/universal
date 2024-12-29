@@ -54,6 +54,35 @@
             email: 'mail@mail.ru',
         },
     ]
+-
+    const komanda_v_1_data2 = [
+        {
+            img: './images/komanda/person-5.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер отдела продаж',
+            email: 'mail@mail.ru',
+            phone1: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-6.webp',
+            name: 'Иванов Иван Иванович',
+            email: 'mail@mail.ru',
+            phone1: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-7.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер отдела продаж',
+            phone1: '+7 (861) 999-99-99',
+            phone2: '+7 (861) 999-99-99',
+        },
+        {
+            img: './images/komanda/person-8.webp',
+            name: 'Иванов Иван Иванович',
+            role: 'Менеджер отдела продаж',
+            email: 'mail@mail.ru',
+        },
+    ]
 
 .komanda_v_1
 
@@ -65,31 +94,88 @@
 
             p.h4.komanda_v_1__subtitle Наши лучшие специалисты всегда на связи!
 
-            .komanda_v_1__wrapper
+            .komanda_v_1__slider.swiper.js-komanda-slider
 
-                each item in komanda_v_1_data
+                .komanda_v_1__slider__nav
 
-                    .komanda_v_1__item
+                    button.button.komanda_v_1__prev(type="button" aria-label="Предыдущий слайд")
+                    button.button.komanda_v_1__next(type="button" aria-label="Следующий слайд")
 
-                        img.komanda_v_1__item_img(src= item.img alt="" decoding="async")
+                .komanda_v_1__wrapper.swiper-wrapper
 
-                        .komanda_v_1__item_descr
+                    each item in komanda_v_1_data
 
-                            p.p.komanda_v_1__name= item.name 
+                        .komanda_v_1__item.swiper-slide
 
-                            if item.role
-                                p.p.komanda_v_1__role= item.role 
+                            img.komanda_v_1__item_img(src= item.img alt="" decoding="async")
 
-                            if item.email
-                                p.p.komanda_v_1__email= item.email 
+                            .komanda_v_1__item_descr
 
-                            if item.phone1
-                                p.p.komanda_v_1__phone= item.phone1 
+                                p.p.komanda_v_1__name= item.name 
 
-                            if item.phone2
-                                p.p.komanda_v_1__phone= item.phone2
+                                if item.role
+                                    p.p.komanda_v_1__role= item.role
+
+                                .komanda_v_1__contacts
+
+                                    if item.email
+
+                                        .komanda_v_1__email
+                                            p.p.komanda_v_1__email_name Почта:
+                                            p.p.komanda_v_1__email_value= item.email 
+
+                                    if item.phone1
+                                        .komanda_v_1__phone
+                                            p.p.komanda_v_1__phone_name Телефон:
+                                            p.p.komanda_v_1__phone_value= item.phone1 
+
+                                        if item.phone2
+                                            p.p.komanda_v_1__phone_value= item.phone2
 
 
+
+            .komanda_v1__department
+
+            h2.komanda_v1__department__title Отдел продаж
+
+
+            .komanda_v_1__slider.swiper.js-komanda-slider
+
+                .komanda_v_1__slider__nav
+
+                    button.button.komanda_v_1__prev(type="button" aria-label="Предыдущий слайд")
+                    button.button.komanda_v_1__next(type="button" aria-label="Следующий слайд")
+
+                .komanda_v_1__wrapper.swiper-wrapper
+
+                    each item in komanda_v_1_data2
+
+                        .komanda_v_1__item.swiper-slide
+
+                            img.komanda_v_1__item_img(src= item.img alt="" decoding="async")
+
+                            .komanda_v_1__item_descr
+
+                                p.p.komanda_v_1__name= item.name 
+
+                                if item.role
+                                    p.p.komanda_v_1__role= item.role
+
+                                .komanda_v_1__contacts
+
+                                    if item.email
+
+                                        .komanda_v_1__email
+                                            p.p.komanda_v_1__email_name Почта:
+                                            p.p.komanda_v_1__email_value= item.email 
+
+                                    if item.phone1
+                                        .komanda_v_1__phone
+                                            p.p.komanda_v_1__phone_name Телефон:
+                                            p.p.komanda_v_1__phone_value= item.phone1 
+
+                                        if item.phone2
+                                            p.p.komanda_v_1__phone_value= item.phone2
 
 
 
