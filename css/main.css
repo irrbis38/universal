@@ -10387,6 +10387,7 @@ input.error {
 @media (max-width:1600px) {
   .lidforma_zakrytaya_v_1__form_input {
     height: 51px;
+    margin-bottom: 18px;
     padding: 5px 15px
   }
   .lidforma_zakrytaya_v_1__form_input::-webkit-input-placeholder {
@@ -10406,6 +10407,7 @@ input.error {
 @media (max-width:1300px) {
   .lidforma_zakrytaya_v_1__form_input {
     height: 42px;
+    margin-bottom: 16px;
     padding: 5px 12px
   }
   .lidforma_zakrytaya_v_1__form_input::-webkit-input-placeholder {
@@ -10861,6 +10863,12 @@ input.error {
   }
 }
 .vidy_variant_1__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   border-radius: 3px;
   border: 1px solid #959595
 }
@@ -10884,6 +10892,9 @@ input.error {
   }
 }
 .vidy_variant_1__item_descr {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-bottom: 56px;
   padding: 45px 30px 0 39px
 }
@@ -12662,6 +12673,7 @@ input.error {
 @media (max-width:1600px) {
   .tovary_v_1__form_input {
     height: 51px;
+    margin-bottom: 18px;
     padding: 5px 15px
   }
   .tovary_v_1__form_input::-webkit-input-placeholder {
@@ -12681,6 +12693,7 @@ input.error {
 @media (max-width:1300px) {
   .tovary_v_1__form_input {
     height: 42px;
+    margin-bottom: 16px;
     padding: 5px 12px
   }
   .tovary_v_1__form_input::-webkit-input-placeholder {
