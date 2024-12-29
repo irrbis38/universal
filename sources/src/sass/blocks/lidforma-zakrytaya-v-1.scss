@@ -374,6 +374,7 @@
 
     @include xl {
         height: 51px;
+        margin-bottom: 18px;
         padding: 5px 15px;
 
         &,
@@ -384,6 +385,7 @@
 
     @include lg {
         height: 42px;
+        margin-bottom: 16px;
         padding: 5px 12px;
 
         &,
